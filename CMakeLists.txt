@@ -9,10 +9,10 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(external/fltk)
 
 # Add your executable
-add_executable(MyInventoryApp main.cpp)
+add_executable(main.cpp)
 
 # Link your executable to FLTK
-target_link_libraries(MyInventoryApp fltk)
+target_link_libraries(main fltk)
 
 # Optional: Set the required include directories for FLTK
 target_include_directories(MyInventoryApp PRIVATE external/fltk/include)

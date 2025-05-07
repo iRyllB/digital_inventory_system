@@ -1,6 +1,5 @@
 #include <iostream>
-#include "headers/login.h"  // Include header from the correct folder
-#include "src/login.cpp"
+#include "headers/login.h"  // Correct path to login.h
 
 using namespace std;
 

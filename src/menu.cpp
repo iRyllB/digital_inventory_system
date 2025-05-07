@@ -1,10 +1,7 @@
 #include <iostream>
+#include "../headers/men_functions.h"
 using namespace std;
 
-// TO BE ADDED AS REAL FUNCTIONS LATER
-void addItem(); 
-void updateItem();
-void deleteItem();
 void showMenu();
 
 int menu() {
@@ -48,22 +45,4 @@ void showMenu() {
     cout << "2. Update Item\n";
     cout << "3. Delete Item\n";
     cout << "4. Exit\n";
-}
-
-// Add Item Function
-void addItem() {
-    cout << "Adding an item...\n";
-    
-}
-
-// Update Item Function
-void updateItem() {
-    cout << "Updating an item...\n";
-    
-}
-
-// Delete Item Function
-void deleteItem() {
-    cout << "Deleting an item...\n";
-    
 }

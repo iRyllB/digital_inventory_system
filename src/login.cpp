@@ -1,11 +1,11 @@
-// login.cpp
 #include <iostream>
 #include <string>
 #include "../headers/login.h"
+#include "../headers/menu.h"
 
 using namespace std;
 
-bool adminLogin() {
+bool adminLogin() {  // ✅ Use bool here
     string username, password;
     string correctUsername = "admin";
     string correctPassword = "1234";
@@ -19,6 +19,7 @@ bool adminLogin() {
 
     if (username == correctUsername && password == correctPassword) {
         cout << "\nAccess Granted. Welcome, Admin!\n";
+        menu();  // ✅ Don't forget the semicolon!
         return true;
     } else {
         cout << "\nAccess Denied. Invalid Credentials.\n";

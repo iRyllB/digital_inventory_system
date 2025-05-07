@@ -1,7 +1,6 @@
-// login.h
 #ifndef LOGIN_H
 #define LOGIN_H
 
-bool adminLogin();  // Function declaration
+bool adminLogin();  // ✅ Use bool here
 
-#endif // LOGIN_H
+#endif

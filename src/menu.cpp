@@ -24,6 +24,9 @@ int menu() {
                 deleteItem();
                 break;
             case 4:
+                viewItems(); 
+                break;
+            case 5:
                 cout << "Exiting program...\n";
                 running = false;
                 break;
@@ -44,5 +47,6 @@ void showMenu() {
     cout << "1. Add Item\n";
     cout << "2. Update Item\n";
     cout << "3. Delete Item\n";
-    cout << "4. Exit\n";
+    cout << "4. View Items\n";
+    cout << "5. Exit\n";       
 }

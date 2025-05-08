@@ -17,5 +17,6 @@ extern vector<Item> inventory;  // Declare, not define
 void addItem();
 void updateItem();
 void deleteItem();
+void viewItems(); 
 
 #endif // MEN_FUNCTIONS_H

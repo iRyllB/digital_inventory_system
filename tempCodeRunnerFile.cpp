@@ -31,7 +31,6 @@ vector <Item> inventory;
         cout << "Item added successfully!\n";
     }
       
-}
  // Global variable to store inventory items
 int main() {
     cout << "Welcome to the Inventory Management System\n";

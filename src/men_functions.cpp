@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip>
 #include "../headers/men_functions.h"
 using namespace std;
 
@@ -80,4 +83,26 @@ void deleteItem() {
     }
 
     cout << "Item with ID " << id << " not found.\n";
+}
+
+// View Items Function
+void viewItems() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty.\n";
+        return;
+    }
+
+    cout << "\n--- Inventory List ---\n";
+    cout << left << setw(10) << "ID"
+         << setw(25) << "Name"
+         << setw(10) << "Quantity"
+         << setw(10) << "Price" << "\n";
+    cout << "-----------------------------------------------------------\n";
+
+    for (const auto& item : inventory) {
+        cout << left << setw(10) << item.id
+             << setw(25) << item.name
+             << setw(10) << item.quantity
+             << setw(10) << fixed << setprecision(2) << item.price << "\n";
+    }
 }

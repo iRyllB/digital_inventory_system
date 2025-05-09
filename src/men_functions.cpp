@@ -3,31 +3,32 @@
 #include <string>
 #include <iomanip>
 #include "../headers/men_functions.h"
+#include "../headers/validation.h"
+
 using namespace std;
 
-vector<Item> inventory;  // Define it here
+vector<Item> inventory;
 
 // Add Item Function
 void addItem() {
     Item item;
-    cout << "Enter Item ID: ";
-    cin >> item.id;
+
+    item.id = getValidatedInt("Enter Item ID (numbers only): ");
+    
     cout << "Enter Item Name: ";
-    cin.ignore();
+    cin.ignore();  // clear leftover newline
     getline(cin, item.name);
-    cout << "Enter Quantity: ";
-    cin >> item.quantity;
-    cout << "Enter Price: ";
-    cin >> item.price;
+
+    item.quantity = getValidatedInt("Enter Quantity: ");
+    item.price = getValidatedDouble("Enter Price: ");
+
     inventory.push_back(item);
     cout << "Item added successfully!\n";
 }
 
 // Update Item Function
 void updateItem() {
-    int id;
-    cout << "Enter the ID of the item to update: ";
-    cin >> id;
+    int id = getValidatedInt("Enter the ID of the item to update: ");
 
     bool found = false;
     for (auto& item : inventory) {
@@ -44,15 +45,13 @@ void updateItem() {
             }
 
             cout << "Enter new quantity (or -1 to keep current): ";
-            int newQuantity;
-            cin >> newQuantity;
+            int newQuantity = getValidatedInt("");
             if (newQuantity != -1) {
                 item.quantity = newQuantity;
             }
 
             cout << "Enter new price (or -1 to keep current): ";
-            double newPrice;
-            cin >> newPrice;
+            double newPrice = getValidatedDouble("");
             if (newPrice != -1) {
                 item.price = newPrice;
             }
@@ -69,9 +68,7 @@ void updateItem() {
 
 // Delete Item Function
 void deleteItem() {
-    int id;
-    cout << "Enter the ID of the item to delete: ";
-    cin >> id;
+    int id = getValidatedInt("Enter the ID of the item to delete: ");
 
     for (auto it = inventory.begin(); it != inventory.end(); ++it) {
         if (it->id == id) {

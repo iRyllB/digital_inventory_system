@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "programwindow.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -19,5 +19,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    void on_loginButton_clicked();
 };
 #endif // MAINWINDOW_H

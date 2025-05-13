@@ -2,21 +2,19 @@
 #include <vector>
 #include <string>
 #include <iomanip>
+#include <fstream> 
 #include "../headers/men_functions.h"
 #include "../headers/validation.h"
 
 using namespace std;
 
 vector<Item> inventory;
-
-// Add Item Function
 void addItem() {
     Item item;
 
     item.id = getValidatedInt("Enter Item ID (numbers only): ");
     
     cout << "Enter Item Name: ";
-    cin.ignore();  // clear leftover newline
     getline(cin, item.name);
 
     item.quantity = getValidatedInt("Enter Quantity: ");
@@ -26,7 +24,7 @@ void addItem() {
     cout << "Item added successfully!\n";
 }
 
-// Update Item Function
+
 void updateItem() {
     int id = getValidatedInt("Enter the ID of the item to update: ");
 
@@ -35,9 +33,7 @@ void updateItem() {
         if (item.id == id) {
             found = true;
             cout << "Updating item: " << item.name << "\n";
-
             cout << "Enter new name (or press Enter to keep current): ";
-            cin.ignore();
             string newName;
             getline(cin, newName);
             if (!newName.empty()) {
@@ -66,23 +62,25 @@ void updateItem() {
     }
 }
 
-// Delete Item Function
 void deleteItem() {
-    int id = getValidatedInt("Enter the ID of the item to delete: ");
+    try {
+        int id = getValidatedInt("Enter the ID of the item to delete: ");
 
-    for (auto it = inventory.begin(); it != inventory.end(); ++it) {
-        if (it->id == id) {
-            cout << "Deleting item: " << it->name << "\n";
-            inventory.erase(it);
-            cout << "Item deleted successfully!\n";
-            return;
+        for (auto it = inventory.begin(); it != inventory.end(); ++it) {
+            if (it->id == id) {
+                cout << "Deleting item: " << it->name << "\n";
+                inventory.erase(it);
+                cout << "Item deleted successfully!\n";
+                return;
+            }
         }
-    }
 
-    cout << "Item with ID " << id << " not found.\n";
+        throw runtime_error("Item with ID " + to_string(id) + " not found.");
+    } catch (const invalid_argument& e) {
+        cout << "Invalid input: " << e.what() << "\n";
+}
 }
 
-// View Items Function
 void viewItems() {
     if (inventory.empty()) {
         cout << "Inventory is empty.\n";
@@ -102,4 +100,46 @@ void viewItems() {
              << setw(10) << item.quantity
              << setw(10) << fixed << setprecision(2) << item.price << "\n";
     }
+}
+
+void saveInventoryToFile(const string& filename) {
+    ofstream outFile(filename);
+
+    if (!outFile) {
+        cout << "Error: Could not open file for writing.\n";
+        return;
+    }
+
+    for (const auto& item : inventory) {
+        outFile << item.id << "\n"
+                << item.name << "\n"
+                << item.quantity << "\n"
+                << item.price << "\n";
+    }
+
+    outFile.close();
+    cout << "Inventory saved to " << filename << " successfully.\n";
+}
+
+void loadInventoryFromFile(const string& filename) {
+    ifstream inFile(filename);
+
+    if (!inFile) {
+        cout << "Error: Could not open file for reading.\n";
+        return;
+    }
+
+    inventory.clear(); 
+
+    Item item;
+    while (inFile >> item.id) {
+        inFile.ignore(); // Ignore newline after ID
+        getline(inFile, item.name);
+        inFile >> item.quantity >> item.price;
+        inFile.ignore(); // Ignore newline after price
+        inventory.push_back(item);
+    }
+
+    inFile.close();
+    cout << "Inventory loaded from " << filename << " successfully.\n";
 }

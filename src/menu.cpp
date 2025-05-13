@@ -30,6 +30,12 @@ int menu() {
                 cout << "Exiting program...\n";
                 running = false;
                 break;
+            case 6:
+                saveInventoryToFile("inventory.txt");
+                break;
+            case 7:
+                loadInventoryFromFile("inventory.txt");
+                break;
             default:
                 cout << "Invalid option, please try again.\n";
                 break;
@@ -48,5 +54,7 @@ void showMenu() {
     cout << "2. Update Item\n";
     cout << "3. Delete Item\n";
     cout << "4. View Items\n";
-    cout << "5. Exit\n";       
+    cout << "5. Exit\n";
+    cout << "6. Save Inventory to File\n";
+    cout << "7. Load Inventory from File\n";
 }

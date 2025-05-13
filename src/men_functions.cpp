@@ -65,6 +65,11 @@ void updateItem() {
 }
 
 void deleteItem() {
+    if (inventory.empty()) {
+        cout << "Cannot delete: No items in the inventory.\n";
+        return;
+    }
+
     try {
         int id = getValidatedInt("Enter the ID of the item to delete: ");
 
@@ -80,8 +85,9 @@ void deleteItem() {
         throw runtime_error("Item with ID " + to_string(id) + " not found.");
     } catch (const invalid_argument& e) {
         cout << "Invalid input: " << e.what() << "\n";
+    }
 }
-}
+
 
 void viewItems() {
     if (inventory.empty()) {

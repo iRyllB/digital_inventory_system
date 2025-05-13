@@ -7,6 +7,8 @@
 #include "../headers/validation.h"
 
 using namespace std;
+void saveInventoryToFile(const string& filename);
+void loadInventoryFromFile(const string& filename);
 
 vector<Item> inventory;
 void addItem() {

@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <ctime>
+#include "headers/men_functions.h"  // Changed from "../headers/men_functions.h"
 
 // Fill Inventory with Random Data
 void fill(int count) {

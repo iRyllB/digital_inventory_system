@@ -28,6 +28,20 @@ void addItem() {
 
 
 void updateItem() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty. Cannot update.\n";
+        return;
+    }
+
+    // Display available items first
+    cout << "\n--- Available Items ---\n";
+    cout << left << setw(10) << "ID" << setw(25) << "Name" << "\n";
+    cout << "-----------------------------------\n";
+    for (const auto& item : inventory) {
+        cout << left << setw(10) << item.id << setw(25) << item.name << "\n";
+    }
+    cout << "-----------------------------------\n";
+
     int id = getValidatedInt("Enter the ID of the item to update: ");
 
     bool found = false;
@@ -65,6 +79,20 @@ void updateItem() {
 }
 
 void deleteItem() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty. Nothing to delete.\n";
+        return;
+    }
+
+    // Display available items first
+    cout << "\n--- Available Items ---\n";
+    cout << left << setw(10) << "ID" << setw(25) << "Name" << "\n";
+    cout << "-----------------------------------\n";
+    for (const auto& item : inventory) {
+        cout << left << setw(10) << item.id << setw(25) << item.name << "\n";
+    }
+    cout << "-----------------------------------\n";
+
     try {
         int id = getValidatedInt("Enter the ID of the item to delete: ");
 
@@ -80,8 +108,11 @@ void deleteItem() {
         throw runtime_error("Item with ID " + to_string(id) + " not found.");
     } catch (const invalid_argument& e) {
         cout << "Invalid input: " << e.what() << "\n";
+    } catch (const runtime_error& e) {
+        cout << e.what() << "\n";
+    }
 }
-}
+
 
 void viewItems() {
     if (inventory.empty()) {

@@ -11,12 +11,12 @@ qt_add_executable(digital_inventory_system
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    programwindow.h programwindow.cpp
 )
 
 target_link_libraries(digital_inventory_system
     PRIVATE
         Qt::Core
+        Qt6::Gui
         Qt::Widgets
 )
 

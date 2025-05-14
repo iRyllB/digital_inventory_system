@@ -12,11 +12,12 @@ struct Item {
     double price;
 };
 
-extern vector<Item> inventory;  // Declare, not define
+extern vector<Item> inventory;
 
 void addItem();
 void updateItem();
 void deleteItem();
 void viewItems(); 
-
+void saveInventoryToFile(const string& filename);
+void loadInventoryFromFile(const string& filename);
 #endif // MEN_FUNCTIONS_H

@@ -80,7 +80,7 @@ void updateItem() {
 
 void deleteItem() {
     if (inventory.empty()) {
-        cout << "Inventory is empty. Nothing to delete.\n";
+        cout << "Cannot delete: No items in the inventory.\n";
         return;
     }
 
@@ -112,6 +112,7 @@ void deleteItem() {
         cout << e.what() << "\n";
     }
 }
+
 
 
 void viewItems() {

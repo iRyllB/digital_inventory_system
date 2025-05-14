@@ -1,15 +1,11 @@
-#include <iostream>
-#include "headers/login.h"  // Make sure the path to login.h is correct
+#include "mainwindow.h"
 
-using namespace std;
+#include <QApplication>
 
-int main() {
-    if (adminLogin()) {
-        cout << "Welcome to the system!\n";
-        // Continue with the rest of your program
-    } else {
-        cout << "Exiting program...\n";
-    }
-
-    return 0;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }

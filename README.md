@@ -1,12 +1,17 @@
-# Basic Electronics Inventory System
+## Requirements
 
-## Overview
-The **Basic Electronics Inventory System** is a simple C++ program designed to manage inventory transactions in a basic electronics store. It allows the user to add items to the inventory, perform purchase or sale transactions, generate receipts, and log each transaction. The system also includes exception handling to ensure that invalid inputs or out-of-stock errors are properly managed.
+- Qt 6.x (install via Qt Online Installer)
+- Vulkan SDK (https://vulkan.lunarg.com/sdk/home)
+- CMake 3.15+
+- C++17 compiler
 
-## Features
-- **Receipt Generation**: Automatically generates a receipt after each transaction.
-- **Transaction Logging**: Logs all transactions in a text file (`transaction_log.txt`).
-- **Exception Handling**: Handles invalid inputs (e.g., non-numeric data for quantity/price, out-of-stock errors).
-- **Simple User Interface**: Console-based interaction for adding items, making transactions, and viewing transaction logs.
+## Build Instructions
 
-## File Structure
+```bash
+git clone https://github.com/iRyllB/digital_inventory_system.git
+cd testqt
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./testqt.exe

@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-digital_inventory_system-Debug-164e928f8448277dc845.json",
+					"jsonFile" : "target-digital_inventory_system-Debug-2fbb3fee546f6da02b23.json",
 					"name" : "digital_inventory_system",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/PC/Desktop/testqt/build",
-		"source" : "C:/Users/PC/Desktop/testqt"
+		"build" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+		"source" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system"
 	},
 	"version" : 
 	{

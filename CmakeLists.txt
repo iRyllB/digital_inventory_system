@@ -8,10 +8,10 @@ qt_standard_project_setup()
 qt_add_executable(digital_inventory_system
     WIN32 MACOSX_BUNDLE
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+    loginwindow.h loginwindow.cpp loginwindow.ui
+    mainwindow.h mainwindow.cpp mainwindow.ui
 )
+
 
 target_link_libraries(digital_inventory_system
     PRIVATE

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/PC/Desktop/testqt/build"
+			"value" : "c:/Users/PC/Documents/GitRepository/digital_inventory_system/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -139,10 +139,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "c:/Qt/Tools/mingw1310_64/bin/g++.exe"
 		},
 		{
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/testqt/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -563,7 +563,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/PC/Desktop/testqt"
+			"value" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1447,7 +1447,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "The CMake toolchain file"
 				}
 			],
 			"type" : "FILEPATH",
@@ -6487,7 +6487,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/testqt/build"
+			"value" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build"
 		},
 		{
 			"name" : "digital_inventory_system_IS_TOP_LEVEL",
@@ -6511,7 +6511,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Desktop/testqt"
+			"value" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system"
 		}
 	],
 	"kind" : "cache",

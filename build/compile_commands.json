@@ -1,20 +1,26 @@
 [
 {
-  "directory": "C:/Users/PC/Desktop/testqt/build",
-  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\digital_inventory_system_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\PC\\Desktop\\testqt\\build\\digital_inventory_system_autogen\\mocs_compilation.cpp",
-  "file": "C:\\Users\\PC\\Desktop\\testqt\\build\\digital_inventory_system_autogen\\mocs_compilation.cpp",
+  "directory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\digital_inventory_system_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\build\\digital_inventory_system_autogen\\mocs_compilation.cpp",
+  "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\build\\digital_inventory_system_autogen\\mocs_compilation.cpp",
   "output": "CMakeFiles\\digital_inventory_system.dir\\digital_inventory_system_autogen\\mocs_compilation.cpp.obj"
 },
 {
-  "directory": "C:/Users/PC/Desktop/testqt/build",
-  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\main.cpp.obj -c C:\\Users\\PC\\Desktop\\testqt\\main.cpp",
-  "file": "C:\\Users\\PC\\Desktop\\testqt\\main.cpp",
+  "directory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\main.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\main.cpp",
+  "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\main.cpp",
   "output": "CMakeFiles\\digital_inventory_system.dir\\main.cpp.obj"
 },
 {
-  "directory": "C:/Users/PC/Desktop/testqt/build",
-  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\mainwindow.cpp.obj -c C:\\Users\\PC\\Desktop\\testqt\\mainwindow.cpp",
-  "file": "C:\\Users\\PC\\Desktop\\testqt\\mainwindow.cpp",
+  "directory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\loginwindow.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\loginwindow.cpp",
+  "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\loginwindow.cpp",
+  "output": "CMakeFiles\\digital_inventory_system.dir\\loginwindow.cpp.obj"
+},
+{
+  "directory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\mainwindow.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\mainwindow.cpp",
+  "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\mainwindow.cpp",
   "output": "CMakeFiles\\digital_inventory_system.dir\\mainwindow.cpp.obj"
 }
 ]

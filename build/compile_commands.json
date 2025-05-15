@@ -22,5 +22,11 @@
   "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\src\\mainwindow.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\src\\mainwindow.cpp",
   "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\src\\mainwindow.cpp",
   "output": "CMakeFiles\\digital_inventory_system.dir\\src\\mainwindow.cpp.obj"
+},
+{
+  "directory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -o CMakeFiles\\digital_inventory_system.dir\\src\\exitconfirmation.cpp.obj -c C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\src\\exitconfirmation.cpp",
+  "file": "C:\\Users\\PC\\Documents\\GitRepository\\digital_inventory_system\\src\\exitconfirmation.cpp",
+  "output": "CMakeFiles\\digital_inventory_system.dir\\src\\exitconfirmation.cpp.obj"
 }
 ]

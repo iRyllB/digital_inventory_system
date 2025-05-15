@@ -5,11 +5,11 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class LoginWindow;  // ✅ This matches your renamed UI class
+class LoginWindow;
 }
 QT_END_NAMESPACE
 
-class MainWindow;  // ✅ Forward declaration of the actual main app window
+class MainWindow;
 
 class LoginWindow : public QMainWindow
 {
@@ -21,10 +21,16 @@ public:
 
 private slots:
     void on_loginButton_clicked();
+    void on_exitButton_clicked();
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+    void closeEvent(QCloseEvent *event) override;
 
 private:
     Ui::LoginWindow *ui;
-    MainWindow *mainWindow;  // ✅ Pointer to the main app window
+    MainWindow *mainWindow;
+    bool loginSuccessClosing = false;  // <<< Add this flag here
 };
 
 #endif // LOGINWINDOW_H

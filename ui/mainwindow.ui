@@ -2,41 +2,351 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>800</width>
-    <height>600</height>
-   </rect>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>625</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>750</width>
+    <height>625</height>
+   </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Inventory Management System</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QGroupBox" name="groupBox_productInfo">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>9</x>
+      <y>9</y>
+      <width>381</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Product Information</string>
+    </property>
+    <widget class="QLabel" name="label_id">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>31</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_id">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>31</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_name">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>54</y>
+       <width>35</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Name:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_name">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>54</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_category">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>76</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Category:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_category">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>76</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>TEST CATEGORY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TEST CATEGORY1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TEST CATEGORY 2</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_quantity">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>98</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Quantity:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_quantity">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>98</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_price">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>120</y>
+       <width>29</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Price:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_price">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>120</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_add">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Product</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_stockIn">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>150</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stock In</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_stockOut">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>180</y>
+       <width>271</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stock Out</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_products">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>731</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>All Products</string>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_products">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>711</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_value">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>30</y>
+      <width>168</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Inventory Value</string>
+    </property>
+    <widget class="QLabel" name="label_totalValue">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>31</y>
+       <width>58</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Total: $0.00</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_calculate">
+     <property name="geometry">
+      <rect>
+       <x>76</x>
+       <y>31</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_delete">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
       <y>110</y>
-      <width>131</width>
-      <height>91</height>
+      <width>218</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Delete Product</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_delete">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>31</y>
+       <width>108</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_delete">
+     <property name="geometry">
+      <rect>
+       <x>126</x>
+       <y>31</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>260</y>
+      <width>80</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="text">
-     <string>THIS IS MAIN WINDOWl</string>
+     <string>Exit</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>33</height>
-    </rect>
-   </property>
+   <widget class="QGroupBox" name="groupBox_search">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>371</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Search Product</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_search">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>31</y>
+       <width>251</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_search">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>30</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

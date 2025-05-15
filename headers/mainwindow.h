@@ -17,6 +17,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
+private slots:
+    void on_pushButton_exit_clicked();
 };
 
 #endif // MAINWINDOW_H

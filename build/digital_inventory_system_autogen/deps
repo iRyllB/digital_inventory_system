@@ -649,12 +649,12 @@ digital_inventory_system_autogen/timestamp: \
 	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/4.0.0/CMakeRCCompiler.cmake \
 	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/4.0.0/CMakeSystem.cmake \
 	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/moc_predefs.h \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.cpp \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/loginwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/mainwindow.h \
 	C:/Users/PC/Documents/GitRepository/digital_inventory_system/main.cpp \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.cpp \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/loginwindow.cpp \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/mainwindow.cpp \
 	c:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/qt.toolchain.cmake \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.ui \
-	C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.ui \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/ui/loginwindow.ui \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/ui/mainwindow.ui \
 	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/bin/cmake.exe

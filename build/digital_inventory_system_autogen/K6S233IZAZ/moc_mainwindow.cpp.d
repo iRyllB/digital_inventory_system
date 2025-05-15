@@ -1,4 +1,4 @@
-C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.h \
+C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/K6S233IZAZ/moc_mainwindow.cpp: C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/mainwindow.h \
   C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \

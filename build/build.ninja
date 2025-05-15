@@ -54,7 +54,7 @@ build CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/m
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\digital_inventory_system.dir\digital_inventory_system_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include
   OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
   OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir\digital_inventory_system_autogen
   TARGET_COMPILE_PDB = CMakeFiles\digital_inventory_system.dir\
@@ -65,31 +65,31 @@ build CMakeFiles/digital_inventory_system.dir/main.cpp.obj: CXX_COMPILER__digita
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\digital_inventory_system.dir\main.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include
   OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
   OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir
   TARGET_COMPILE_PDB = CMakeFiles\digital_inventory_system.dir\
   TARGET_PDB = digital_inventory_system.pdb
 
-build CMakeFiles/digital_inventory_system.dir/loginwindow.cpp.obj: CXX_COMPILER__digital_inventory_system_unscanned_Debug C$:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.cpp || cmake_object_order_depends_target_digital_inventory_system
+build CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj: CXX_COMPILER__digital_inventory_system_unscanned_Debug C$:/Users/PC/Documents/GitRepository/digital_inventory_system/src/loginwindow.cpp || cmake_object_order_depends_target_digital_inventory_system
   CONFIG = Debug
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\digital_inventory_system.dir\loginwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\digital_inventory_system.dir\src\loginwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include
   OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
-  OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir
+  OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\digital_inventory_system.dir\
   TARGET_PDB = digital_inventory_system.pdb
 
-build CMakeFiles/digital_inventory_system.dir/mainwindow.cpp.obj: CXX_COMPILER__digital_inventory_system_unscanned_Debug C$:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.cpp || cmake_object_order_depends_target_digital_inventory_system
+build CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj: CXX_COMPILER__digital_inventory_system_unscanned_Debug C$:/Users/PC/Documents/GitRepository/digital_inventory_system/src/mainwindow.cpp || cmake_object_order_depends_target_digital_inventory_system
   CONFIG = Debug
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\digital_inventory_system.dir\mainwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\digital_inventory_system.dir\src\mainwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets
+  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/include
   OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
-  OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir
+  OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\digital_inventory_system.dir\
   TARGET_PDB = digital_inventory_system.pdb
 
@@ -101,7 +101,7 @@ build CMakeFiles/digital_inventory_system.dir/mainwindow.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable digital_inventory_system.exe
 
-build digital_inventory_system.exe: CXX_EXECUTABLE_LINKER__digital_inventory_system_Debug CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj CMakeFiles/digital_inventory_system.dir/main.cpp.obj CMakeFiles/digital_inventory_system.dir/loginwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/mainwindow.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || digital_inventory_system_autogen digital_inventory_system_autogen_timestamp_deps
+build digital_inventory_system.exe: CXX_EXECUTABLE_LINKER__digital_inventory_system_Debug CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj CMakeFiles/digital_inventory_system.dir/main.cpp.obj CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || digital_inventory_system_autogen digital_inventory_system_autogen_timestamp_deps
   CONFIG = Debug
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
   LINK_FLAGS = -mwindows
@@ -190,7 +190,7 @@ build digital_inventory_system_autogen_timestamp_deps: phony
 #############################################
 # Utility command for digital_inventory_system_autogen
 
-build digital_inventory_system_autogen: phony CMakeFiles/digital_inventory_system_autogen digital_inventory_system_autogen/include/ui_loginwindow.h digital_inventory_system_autogen/include/ui_mainwindow.h digital_inventory_system_autogen/timestamp digital_inventory_system_autogen/mocs_compilation.cpp digital_inventory_system_autogen_timestamp_deps
+build digital_inventory_system_autogen: phony CMakeFiles/digital_inventory_system_autogen digital_inventory_system_autogen/include/ui/ui_loginwindow.h digital_inventory_system_autogen/include/ui/ui_mainwindow.h digital_inventory_system_autogen/timestamp digital_inventory_system_autogen/mocs_compilation.cpp digital_inventory_system_autogen_timestamp_deps
 
 
 #############################################
@@ -207,7 +207,7 @@ build digital_inventory_system_autogen/timestamp digital_inventory_system_autoge
 #############################################
 # Phony custom command for CMakeFiles\digital_inventory_system_autogen
 
-build CMakeFiles/digital_inventory_system_autogen digital_inventory_system_autogen/include/ui_loginwindow.h digital_inventory_system_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/digital_inventory_system_autogen ${cmake_ninja_workdir}digital_inventory_system_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}digital_inventory_system_autogen/include/ui_mainwindow.h: phony digital_inventory_system_autogen/timestamp || digital_inventory_system_autogen_timestamp_deps
+build CMakeFiles/digital_inventory_system_autogen digital_inventory_system_autogen/include/ui/ui_loginwindow.h digital_inventory_system_autogen/include/ui/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/digital_inventory_system_autogen ${cmake_ninja_workdir}digital_inventory_system_autogen/include/ui/ui_loginwindow.h ${cmake_ninja_workdir}digital_inventory_system_autogen/include/ui/ui_mainwindow.h: phony digital_inventory_system_autogen/timestamp || digital_inventory_system_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

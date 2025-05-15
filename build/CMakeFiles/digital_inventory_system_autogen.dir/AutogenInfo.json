@@ -370,15 +370,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.h",
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/loginwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_loginwindow.cpp",
+			"K6S233IZAZ/moc_loginwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.h",
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"K6S233IZAZ/moc_mainwindow.cpp",
 			null
 		]
 	],
@@ -408,12 +408,13 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers",
 		"C:/Qt/6.9.0/mingw_64/include/QtCore",
 		"C:/Qt/6.9.0/mingw_64/include",
 		"C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++",
+		"C:/Qt/6.9.0/mingw_64/include/QtWidgets",
 		"C:/Qt/6.9.0/mingw_64/include/QtGui",
 		"C:/VulkanSDK/1.4.313.0/include",
-		"C:/Qt/6.9.0/mingw_64/include/QtWidgets",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
@@ -454,23 +455,23 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/loginwindow.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/mainwindow.cpp",
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/loginwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/mainwindow.cpp",
 			"MU",
 			null
 		]
 	],
 	"UIC_OPTIONS" : [],
-	"UIC_SEARCH_PATHS" : [],
+	"UIC_SEARCH_PATHS" : [ "C:/Users/PC/Documents/GitRepository/digital_inventory_system/ui" ],
 	"UIC_SKIP" : [],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,

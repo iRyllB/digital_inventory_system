@@ -35,7 +35,7 @@
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
-			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 44,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 35,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -151,7 +151,7 @@
 			{
 				"command" : 8,
 				"file" : 7,
-				"line" : 76,
+				"line" : 78,
 				"parent" : 18
 			},
 			{
@@ -215,7 +215,7 @@
 			{
 				"command" : 8,
 				"file" : 7,
-				"line" : 76,
+				"line" : 78,
 				"parent" : 30
 			},
 			{
@@ -241,7 +241,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 30,
+				"line" : 31,
 				"parent" : 0
 			}
 		]
@@ -252,7 +252,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG -g -fdiagnostics-color=always"
+					"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g"
 				}
 			],
 			"defines" : 
@@ -306,7 +306,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include"
+					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include"
 				},
 				{
 					"backtrace" : 36,
@@ -340,7 +340,7 @@
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "C:/VulkanSDK/1.4.313.0/Include"
+					"path" : "C:/VulkanSDK/1.4.313.0/include"
 				}
 			],
 			"language" : "CXX",
@@ -384,7 +384,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-DQT_QML_DEBUG -g",
+				"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g",
 				"role" : "flags"
 			},
 			{
@@ -472,9 +472,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				10,
 				11,
-				12
+				12,
+				13
 			]
 		},
 		{
@@ -497,18 +497,19 @@
 			]
 		},
 		{
-			"name" : "Forms",
+			"name" : "",
 			"sourceIndexes" : 
 			[
 				8,
-				9
+				9,
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13
+				14
 			]
 		}
 	],
@@ -518,7 +519,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/mocs_compilation.cpp",
+			"path" : "build/digital_inventory_system_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -571,27 +572,32 @@
 			"sourceGroupIndex" : 3
 		},
 		{
+			"backtrace" : 4,
+			"path" : "product.txt",
+			"sourceGroupIndex" : 3
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include/ui/ui_loginwindow.h",
+			"path" : "build/digital_inventory_system_autogen/include/ui/ui_loginwindow.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include/ui/ui_mainwindow.h",
+			"path" : "build/digital_inventory_system_autogen/include/ui/ui_mainwindow.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/timestamp",
+			"path" : "build/digital_inventory_system_autogen/timestamp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/timestamp.rule",
+			"path" : "build/digital_inventory_system_autogen/timestamp.rule",
 			"sourceGroupIndex" : 4
 		}
 	],

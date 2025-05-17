@@ -1,21 +1,11 @@
 # ninja log v6
-31	2155	7690002285657439	digital_inventory_system_autogen/timestamp	141f2df111610148
-31	2155	7690002285657439	digital_inventory_system_autogen/mocs_compilation.cpp	141f2df111610148
-31	2155	7690002285657439	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/mocs_compilation.cpp	141f2df111610148
-31	2155	7690002285657439	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	141f2df111610148
-2158	11475	7690002289092172	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	29e458b653918660
-2194	14162	7690002289462151	CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj	925cf6fb77d1bfee
-2171	11661	7690002289234019	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	7a9c6f4c7c656ce8
-2183	12868	7690002289350431	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
-14162	14975	7690002409147930	digital_inventory_system.exe	11fae30aa56eeee4
-1611	11393	7689988874597613	CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj	8f5c2edd953df798
 74	2425	7691931541577513	digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
 74	2425	7691931541577513	digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
-74	2425	7691931541577513	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
 74	2425	7691931541577513	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
-2437	13417	7691931543756877	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	7a9c6f4c7c656ce8
+74	2425	7691931541577513	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
 2430	13419	7691931543679877	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	29e458b653918660
-2459	13462	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj	8f5c2edd953df798
-2445	14824	7691931543837029	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
 2451	15417	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj	925cf6fb77d1bfee
+2437	13417	7691931543756877	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	7a9c6f4c7c656ce8
+2445	14824	7691931543837029	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
 15417	16048	7691931673565692	digital_inventory_system.exe	11fae30aa56eeee4
+2459	13462	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj	8f5c2edd953df798

@@ -25,6 +25,7 @@ qt_add_executable(digital_inventory_system
     # UI files (CMake will still process these)
     ui/loginwindow.ui
     ui/mainwindow.ui
+    product.txt
 )
 
 target_include_directories(digital_inventory_system

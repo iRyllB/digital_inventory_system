@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 44,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 35,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -241,7 +241,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 30,
+				"line" : 31,
 				"parent" : 0
 			}
 		]
@@ -357,11 +357,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
+			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",
@@ -472,9 +472,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				10,
 				11,
-				12
+				12,
+				13
 			]
 		},
 		{
@@ -505,10 +505,17 @@
 			]
 		},
 		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				10
+			]
+		},
+		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13
+				14
 			]
 		}
 	],
@@ -571,6 +578,11 @@
 			"sourceGroupIndex" : 3
 		},
 		{
+			"backtrace" : 4,
+			"path" : "product.txt",
+			"sourceGroupIndex" : 4
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include/ui/ui_loginwindow.h",
@@ -592,7 +604,7 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

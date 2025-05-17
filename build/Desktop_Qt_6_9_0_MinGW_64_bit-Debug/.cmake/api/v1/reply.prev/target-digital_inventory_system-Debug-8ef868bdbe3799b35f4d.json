@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 45,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 36,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -241,7 +241,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 31,
+				"line" : 32,
 				"parent" : 0
 			}
 		]
@@ -472,9 +472,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				11,
 				12,
-				13
+				13,
+				14
 			]
 		},
 		{
@@ -508,14 +508,15 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				10
+				10,
+				11
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				14
+				15
 			]
 		}
 	],
@@ -579,7 +580,12 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "products.txt",
+			"path" : "product.txt",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 4,
+			"path" : "build/inventory.txt",
 			"sourceGroupIndex" : 4
 		},
 		{

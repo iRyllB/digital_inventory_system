@@ -26,6 +26,9 @@ private slots:
     void on_pushButton_load_clicked();
     void on_pushButton_add_clicked();
     void on_pushButton_delete_clicked();
+    void on_pushButton_search_clicked();
+    void on_pushButton_reset_search_clicked();
+    void on_pushButton_calculate_clicked();
 };
 
 #endif // MAINWINDOW_H

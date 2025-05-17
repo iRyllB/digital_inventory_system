@@ -242,7 +242,7 @@
      <rect>
       <x>400</x>
       <y>60</y>
-      <width>168</width>
+      <width>211</width>
       <height>67</height>
      </rect>
     </property>
@@ -254,7 +254,7 @@
       <rect>
        <x>12</x>
        <y>31</y>
-       <width>58</width>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
@@ -265,9 +265,9 @@
     <widget class="QPushButton" name="pushButton_calculate">
      <property name="geometry">
       <rect>
-       <x>76</x>
-       <y>31</y>
-       <width>80</width>
+       <x>129</x>
+       <y>30</y>
+       <width>71</width>
        <height>24</height>
       </rect>
      </property>
@@ -342,28 +342,15 @@
       <rect>
        <x>12</x>
        <y>31</y>
-       <width>371</width>
+       <width>291</width>
        <height>24</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_search">
-     <property name="geometry">
-      <rect>
-       <x>499</x>
-       <y>30</y>
-       <width>91</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Search</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox_filter">
      <property name="geometry">
       <rect>
-       <x>391</x>
+       <x>310</x>
        <y>30</y>
        <width>101</width>
        <height>24</height>
@@ -389,6 +376,32 @@
        <string>Category</string>
       </property>
      </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_reset_search">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>30</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_search">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>30</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_load">

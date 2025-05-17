@@ -5,7 +5,7 @@
 #include <QCloseEvent>
 #include <QFile>
 #include <QTextStream>
-
+#include <QLocale>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -237,4 +237,108 @@ void MainWindow::on_pushButton_delete_clicked()
     // Clear delete input and reload table
     ui->lineEdit_delete->clear();
     on_pushButton_load_clicked();
+}
+
+void MainWindow::on_pushButton_search_clicked()
+{
+    QString searchText = ui->lineEdit_search->text().trimmed();
+    QString filter = ui->comboBox_filter->currentText();
+
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        return;
+    }
+
+    QTextStream in(&file);
+
+    // Read header
+    QString headerLine = in.readLine().trimmed();
+    QStringList headers = headerLine.split(",");
+
+    // Setup table
+    ui->tableWidget_products->clear();
+    ui->tableWidget_products->setRowCount(0);
+    ui->tableWidget_products->setColumnCount(headers.size());
+    ui->tableWidget_products->setHorizontalHeaderLabels(headers);
+
+    int row = 0;
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty()) continue;
+
+        QStringList fields = line.split(",");
+        bool match = false;
+
+        if (filter == "All") {
+            for (const QString& field : fields) {
+                if (field.contains(searchText, Qt::CaseInsensitive)) {
+                    match = true;
+                    break;
+                }
+            }
+        } else if (filter == "Product ID" && fields.value(0).contains(searchText, Qt::CaseInsensitive)) {
+            match = true;
+        } else if (filter == "Product Name" && fields.value(1).contains(searchText, Qt::CaseInsensitive)) {
+            match = true;
+        } else if (filter == "Category" && fields.value(2).contains(searchText, Qt::CaseInsensitive)) {
+            match = true;
+        }
+
+        if (match) {
+            ui->tableWidget_products->insertRow(row);
+            for (int col = 0; col < fields.size(); ++col) {
+                ui->tableWidget_products->setItem(row, col, new QTableWidgetItem(fields[col]));
+            }
+            ++row;
+        }
+    }
+
+    file.close();
+}
+
+void MainWindow::on_pushButton_reset_search_clicked()
+{
+    // Clear search field and reset filter
+    ui->lineEdit_search->clear();
+    ui->comboBox_filter->setCurrentIndex(0);  // Assumes "All" is the first item
+
+    // Reload the entire table
+    on_pushButton_load_clicked();
+}
+
+
+void MainWindow::on_pushButton_calculate_clicked()
+{
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        return;
+    }
+
+    QTextStream in(&file);
+    double totalValue = 0.0;
+
+    // Skip header
+    QString headerLine = in.readLine();
+
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty()) continue;
+
+        QStringList fields = line.split(",");
+        if (fields.size() >= 5) {
+            int quantity = fields[3].toInt();
+            double price = fields[4].toDouble();
+            totalValue += quantity * price;
+        }
+    }
+
+    file.close();
+
+    // Format the total with commas
+    QLocale locale(QLocale::English);
+    QString formattedValue = locale.toString(totalValue, 'f', 2);  // e.g., "12,345.67"
+
+    ui->label_totalValue->setText("₱" + formattedValue);
 }

@@ -55,8 +55,9 @@ public:
     QPushButton *pushButton_exit;
     QGroupBox *groupBox_search;
     QLineEdit *lineEdit_search;
-    QPushButton *pushButton_search;
     QComboBox *comboBox_filter;
+    QPushButton *pushButton_reset_search;
+    QPushButton *pushButton_search;
     QPushButton *pushButton_load;
     QStatusBar *statusbar;
 
@@ -124,13 +125,13 @@ public:
         tableWidget_products->setGeometry(QRect(10, 30, 581, 261));
         groupBox_value = new QGroupBox(centralwidget);
         groupBox_value->setObjectName("groupBox_value");
-        groupBox_value->setGeometry(QRect(400, 60, 168, 67));
+        groupBox_value->setGeometry(QRect(400, 60, 211, 67));
         label_totalValue = new QLabel(groupBox_value);
         label_totalValue->setObjectName("label_totalValue");
-        label_totalValue->setGeometry(QRect(12, 31, 58, 16));
+        label_totalValue->setGeometry(QRect(12, 31, 111, 16));
         pushButton_calculate = new QPushButton(groupBox_value);
         pushButton_calculate->setObjectName("pushButton_calculate");
-        pushButton_calculate->setGeometry(QRect(76, 31, 80, 24));
+        pushButton_calculate->setGeometry(QRect(129, 30, 71, 24));
         groupBox_delete = new QGroupBox(centralwidget);
         groupBox_delete->setObjectName("groupBox_delete");
         groupBox_delete->setGeometry(QRect(400, 130, 218, 67));
@@ -148,17 +149,20 @@ public:
         groupBox_search->setGeometry(QRect(10, 230, 601, 67));
         lineEdit_search = new QLineEdit(groupBox_search);
         lineEdit_search->setObjectName("lineEdit_search");
-        lineEdit_search->setGeometry(QRect(12, 31, 371, 24));
-        pushButton_search = new QPushButton(groupBox_search);
-        pushButton_search->setObjectName("pushButton_search");
-        pushButton_search->setGeometry(QRect(499, 30, 91, 24));
+        lineEdit_search->setGeometry(QRect(12, 31, 291, 24));
         comboBox_filter = new QComboBox(groupBox_search);
         comboBox_filter->addItem(QString());
         comboBox_filter->addItem(QString());
         comboBox_filter->addItem(QString());
         comboBox_filter->addItem(QString());
         comboBox_filter->setObjectName("comboBox_filter");
-        comboBox_filter->setGeometry(QRect(391, 30, 101, 24));
+        comboBox_filter->setGeometry(QRect(310, 30, 101, 24));
+        pushButton_reset_search = new QPushButton(groupBox_search);
+        pushButton_reset_search->setObjectName("pushButton_reset_search");
+        pushButton_reset_search->setGeometry(QRect(510, 30, 81, 24));
+        pushButton_search = new QPushButton(groupBox_search);
+        pushButton_search->setObjectName("pushButton_search");
+        pushButton_search->setGeometry(QRect(420, 30, 81, 24));
         pushButton_load = new QPushButton(centralwidget);
         pushButton_load->setObjectName("pushButton_load");
         pushButton_load->setGeometry(QRect(400, 30, 80, 24));
@@ -196,12 +200,13 @@ public:
         pushButton_delete->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         pushButton_exit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         groupBox_search->setTitle(QCoreApplication::translate("MainWindow", "Search Product", nullptr));
-        pushButton_search->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         comboBox_filter->setItemText(0, QCoreApplication::translate("MainWindow", "All", nullptr));
         comboBox_filter->setItemText(1, QCoreApplication::translate("MainWindow", "Product ID", nullptr));
         comboBox_filter->setItemText(2, QCoreApplication::translate("MainWindow", "Product Name", nullptr));
         comboBox_filter->setItemText(3, QCoreApplication::translate("MainWindow", "Category", nullptr));
 
+        pushButton_reset_search->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        pushButton_search->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         pushButton_load->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
     } // retranslateUi
 

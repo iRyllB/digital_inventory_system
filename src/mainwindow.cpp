@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Lock the window size
-    this->setFixedSize(750, 625);
+    this->setFixedSize(625, 625);
 
     // Optional: Connect buttons to functions here
     // connect(ui->pushButton_add, &QPushButton::clicked, this, &MainWindow::onAddProduct);

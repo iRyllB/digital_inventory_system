@@ -2,15 +2,23 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>625</width>
+    <height>625</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
-    <width>750</width>
+    <width>625</width>
     <height>625</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>750</width>
+    <width>625</width>
     <height>625</height>
    </size>
   </property>
@@ -205,7 +213,7 @@
      <rect>
       <x>10</x>
       <y>300</y>
-      <width>731</width>
+      <width>601</width>
       <height>301</height>
      </rect>
     </property>
@@ -217,7 +225,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>711</width>
+       <width>581</width>
        <height>261</height>
       </rect>
      </property>
@@ -227,7 +235,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>30</y>
+      <y>60</y>
       <width>168</width>
       <height>67</height>
      </rect>
@@ -266,7 +274,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>110</y>
+      <y>130</y>
       <width>218</width>
       <height>67</height>
      </rect>
@@ -301,8 +309,8 @@
    <widget class="QPushButton" name="pushButton_exit">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>260</y>
+      <x>490</x>
+      <y>30</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -316,7 +324,7 @@
      <rect>
       <x>10</x>
       <y>230</y>
-      <width>371</width>
+      <width>601</width>
       <height>67</height>
      </rect>
     </property>
@@ -328,7 +336,7 @@
       <rect>
        <x>12</x>
        <y>31</y>
-       <width>251</width>
+       <width>491</width>
        <height>24</height>
       </rect>
      </property>
@@ -336,7 +344,7 @@
     <widget class="QPushButton" name="pushButton_search">
      <property name="geometry">
       <rect>
-       <x>280</x>
+       <x>510</x>
        <y>30</y>
        <width>80</width>
        <height>24</height>
@@ -346,6 +354,19 @@
       <string>Search</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_load">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>30</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

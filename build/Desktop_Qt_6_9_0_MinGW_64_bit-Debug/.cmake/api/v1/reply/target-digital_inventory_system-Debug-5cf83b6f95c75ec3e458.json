@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 43,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 34,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
@@ -241,7 +241,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 29,
+				"line" : 30,
 				"parent" : 0
 			}
 		]
@@ -349,7 +349,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -471,9 +472,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				8,
-				9,
-				10
+				10,
+				11,
+				12
 			]
 		},
 		{
@@ -482,30 +483,32 @@
 			[
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				4,
-				5
+				5,
+				6,
+				7
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
-				6,
-				7
+				8,
+				9
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				11
+				13
 			]
 		}
 	],
@@ -538,12 +541,23 @@
 		},
 		{
 			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/exitconfirmation.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"path" : "headers/loginwindow.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
 			"path" : "headers/mainwindow.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "headers/exitconfirmation.h",
 			"sourceGroupIndex" : 2
 		},
 		{

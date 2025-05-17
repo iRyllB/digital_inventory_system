@@ -752,5 +752,7 @@ C:/Users/PC/Documents/GitRepository/digital_inventory_system/main.cpp
 C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/mainwindow.cpp
  uic:ui_mainwindow.h
 C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/exitconfirmation.cpp
+C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/inputvalidator.h
 C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/loginwindow.cpp
  uic:ui_loginwindow.h
+C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/inputvalidator.cpp

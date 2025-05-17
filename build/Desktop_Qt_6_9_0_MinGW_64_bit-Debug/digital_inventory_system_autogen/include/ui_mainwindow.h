@@ -98,12 +98,14 @@ public:
         spinBox_quantity = new QSpinBox(groupBox_productInfo);
         spinBox_quantity->setObjectName("spinBox_quantity");
         spinBox_quantity->setGeometry(QRect(98, 98, 271, 21));
+        spinBox_quantity->setMaximum(999999);
         label_price = new QLabel(groupBox_productInfo);
         label_price->setObjectName("label_price");
         label_price->setGeometry(QRect(12, 120, 29, 16));
         doubleSpinBox_price = new QDoubleSpinBox(groupBox_productInfo);
         doubleSpinBox_price->setObjectName("doubleSpinBox_price");
         doubleSpinBox_price->setGeometry(QRect(98, 120, 271, 21));
+        doubleSpinBox_price->setMaximum(99999999.989999994635582);
         pushButton_add = new QPushButton(groupBox_productInfo);
         pushButton_add->setObjectName("pushButton_add");
         pushButton_add->setGeometry(QRect(10, 150, 80, 21));

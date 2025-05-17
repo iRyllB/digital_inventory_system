@@ -35,7 +35,7 @@
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
-			"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 45,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 36,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -151,7 +151,7 @@
 			{
 				"command" : 8,
 				"file" : 7,
-				"line" : 78,
+				"line" : 76,
 				"parent" : 18
 			},
 			{
@@ -215,7 +215,7 @@
 			{
 				"command" : 8,
 				"file" : 7,
-				"line" : 78,
+				"line" : 76,
 				"parent" : 30
 			},
 			{
@@ -241,7 +241,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 31,
+				"line" : 34,
 				"parent" : 0
 			}
 		]
@@ -252,7 +252,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g"
+					"fragment" : "-DQT_QML_DEBUG -g -fdiagnostics-color=always"
 				}
 			],
 			"defines" : 
@@ -306,7 +306,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include"
+					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include"
 				},
 				{
 					"backtrace" : 36,
@@ -340,7 +340,7 @@
 				{
 					"backtrace" : 6,
 					"isSystem" : true,
-					"path" : "C:/VulkanSDK/1.4.313.0/include"
+					"path" : "C:/VulkanSDK/1.4.313.0/Include"
 				}
 			],
 			"language" : "CXX",
@@ -350,18 +350,19 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",
@@ -384,7 +385,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g",
+				"fragment" : "-DQT_QML_DEBUG -g",
 				"role" : "flags"
 			},
 			{
@@ -472,9 +473,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				11,
-				12,
-				13
+				13,
+				14,
+				15
 			]
 		},
 		{
@@ -484,32 +485,40 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				5,
 				6,
-				7
+				7,
+				8,
+				9
+			]
+		},
+		{
+			"name" : "Forms",
+			"sourceIndexes" : 
+			[
+				10,
+				11
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				8,
-				9,
-				10
+				12
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				14
+				16
 			]
 		}
 	],
@@ -519,7 +528,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/digital_inventory_system_autogen/mocs_compilation.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -548,6 +557,12 @@
 		},
 		{
 			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/inputvalidator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"path" : "headers/loginwindow.h",
 			"sourceGroupIndex" : 2
 		},
@@ -563,6 +578,11 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "headers/inputvalidator.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "ui/loginwindow.ui",
 			"sourceGroupIndex" : 3
 		},
@@ -574,31 +594,31 @@
 		{
 			"backtrace" : 4,
 			"path" : "product.txt",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/digital_inventory_system_autogen/include/ui/ui_loginwindow.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/digital_inventory_system_autogen/include/ui/ui_mainwindow.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/digital_inventory_system_autogen/timestamp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/digital_inventory_system_autogen/timestamp.rule",
 			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include/ui/ui_loginwindow.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include/ui/ui_mainwindow.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/timestamp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/timestamp.rule",
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

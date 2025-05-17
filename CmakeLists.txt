@@ -17,11 +17,14 @@ qt_add_executable(digital_inventory_system
     src/loginwindow.cpp
     src/mainwindow.cpp
     src/exitconfirmation.cpp
+    src/inputvalidator.cpp
 
     # Header files
     headers/loginwindow.h
     headers/mainwindow.h
     headers/exitconfirmation.h
+    headers/inputvalidator.h
+
     # UI files (CMake will still process these)
     ui/loginwindow.ui
     ui/mainwindow.ui

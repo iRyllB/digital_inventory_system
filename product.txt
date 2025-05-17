@@ -1,4 +1,6 @@
-ProductID,ProductName,Quantity,Price
-101,Apple,10,0.50
-102,Banana,25,0.30
-103,Orange,15,0.40
+ProductID,ProductName,Category,Quantity,Price
+101,Apple,FRUIT,10,0.50
+102,Banana,FRUIT,25,0.30
+103,Orange,FRUIT,15,0.40
+WEW,EWEW,TEST CATEGORY 2,232,12.00
+12,32131,TEST CATEGORY1,320,32.00

@@ -297,6 +297,12 @@
 			null
 		],
 		[
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/inputvalidator.h",
+			"MU",
+			"K6S233IZAZ/moc_inputvalidator.cpp",
+			null
+		],
+		[
 			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/loginwindow.h",
 			"MU",
 			"K6S233IZAZ/moc_loginwindow.cpp",
@@ -388,6 +394,11 @@
 		],
 		[
 			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/exitconfirmation.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/inputvalidator.cpp",
 			"MU",
 			null
 		],

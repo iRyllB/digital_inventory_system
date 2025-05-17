@@ -17,13 +17,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 46,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 57,
+				"line" : 59,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 		{
 			"backtrace" : 2,
 			"component" : "Unspecified",
-			"scriptFile" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/deploy_digital_inventory_system_0ee8764861.cmake",
+			"scriptFile" : "build/.qt/deploy_digital_inventory_system_0ee8764861.cmake",
 			"type" : "script"
 		}
 	],

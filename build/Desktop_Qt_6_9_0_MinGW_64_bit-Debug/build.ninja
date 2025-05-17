@@ -89,6 +89,14 @@ build CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
   OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir\src
 
+build CMakeFiles/digital_inventory_system.dir/src/inputvalidator.cpp.obj: CXX_COMPILER__digital_inventory_system_unscanned_Debug C$:/Users/PC/Documents/GitRepository/digital_inventory_system/src/inputvalidator.cpp || cmake_object_order_depends_target_digital_inventory_system
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\digital_inventory_system.dir\src\inputvalidator.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/digital_inventory_system_autogen/include -IC:/Users/PC/Documents/GitRepository/digital_inventory_system/headers -isystem C:/Qt/6.9.0/mingw_64/include/QtCore -isystem C:/Qt/6.9.0/mingw_64/include -isystem C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.0/mingw_64/include/QtGui -isystem C:/VulkanSDK/1.4.313.0/Include
+  OBJECT_DIR = CMakeFiles\digital_inventory_system.dir
+  OBJECT_FILE_DIR = CMakeFiles\digital_inventory_system.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target digital_inventory_system
@@ -97,7 +105,7 @@ build CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj: CXX_
 #############################################
 # Link the executable digital_inventory_system.exe
 
-build digital_inventory_system.exe: CXX_EXECUTABLE_LINKER__digital_inventory_system_Debug CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj CMakeFiles/digital_inventory_system.dir/main.cpp.obj CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || digital_inventory_system_autogen digital_inventory_system_autogen_timestamp_deps
+build digital_inventory_system.exe: CXX_EXECUTABLE_LINKER__digital_inventory_system_Debug CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj CMakeFiles/digital_inventory_system.dir/main.cpp.obj CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj CMakeFiles/digital_inventory_system.dir/src/inputvalidator.cpp.obj | C$:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a || digital_inventory_system_autogen digital_inventory_system_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

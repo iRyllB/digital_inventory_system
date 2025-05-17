@@ -1,11 +1,11 @@
 # ninja log v6
-74	2425	7691931541577513	digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
-74	2425	7691931541577513	digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
-74	2425	7691931541577513	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
-74	2425	7691931541577513	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
-2430	13419	7691931543679877	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	29e458b653918660
-2451	15417	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj	925cf6fb77d1bfee
+62	1830	7691959025493725	digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
+62	1830	7691959025493725	digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
+62	1830	7691959025493725	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
+62	1830	7691959025493725	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
+1833	9469	7691959026447278	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	29e458b653918660
+1847	11772	7691959026677888	CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj	925cf6fb77d1bfee
 2437	13417	7691931543756877	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	7a9c6f4c7c656ce8
-2445	14824	7691931543837029	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
-15417	16048	7691931673565692	digital_inventory_system.exe	11fae30aa56eeee4
+1840	10575	7691959026607897	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
+11774	12448	7691959125864543	digital_inventory_system.exe	11fae30aa56eeee4
 2459	13462	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj	8f5c2edd953df798

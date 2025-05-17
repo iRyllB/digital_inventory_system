@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Lock the window size
-    this->setFixedSize(625, 625);
+    this->setFixedSize(625, 650);
 
     // Optional: Connect buttons to functions here
     // connect(ui->pushButton_add, &QPushButton::clicked, this, &MainWindow::onAddProduct);
@@ -155,5 +155,86 @@ void MainWindow::on_pushButton_add_clicked()
     QMessageBox::information(this, "Success", "Product added successfully.");
 
     // Reload the table to show new product
+    on_pushButton_load_clicked();
+}
+
+void MainWindow::on_pushButton_delete_clicked()
+{
+    QString idToDelete = ui->lineEdit_delete->text().trimmed();
+
+    if (idToDelete.isEmpty()) {
+        QMessageBox::warning(this, "Input Error", "Please enter a Product ID to delete.");
+        return;
+    }
+
+    // Make sure id is integer
+    bool ok;
+    int idInt = idToDelete.toInt(&ok);
+    if (!ok) {
+        QMessageBox::warning(this, "Input Error", "Product ID must be an integer.");
+        return;
+    }
+
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        return;
+    }
+
+    QTextStream in(&file);
+    QStringList lines;
+    QString productLineToDelete;
+    QString productDetails;
+
+    // Read all lines, find the product and keep track for deletion
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty()) continue;
+
+        QStringList fields = line.split(",");
+
+        if (!fields.isEmpty() && fields[0] == idToDelete) {
+            productLineToDelete = line;
+            productDetails = QString("ID: %1\nName: %2\nCategory: %3\nQuantity: %4\nPrice: %5")
+                                 .arg(fields.value(0))
+                                 .arg(fields.value(1))
+                                 .arg(fields.value(2))
+                                 .arg(fields.value(3))
+                                 .arg(fields.value(4));
+        } else {
+            lines << line;  // Keep all other lines
+        }
+    }
+    file.close();
+
+    if (productLineToDelete.isEmpty()) {
+        QMessageBox::information(this, "Not Found", "Product ID not found.");
+        return;
+    }
+
+    // Show confirmation dialog with product details
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "Confirm Delete",
+                                                              "Are you sure you want to delete this product?\n\n" + productDetails,
+                                                              QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::No)
+        return;  // User cancelled
+
+    // Rewrite file without the deleted product line
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        QMessageBox::warning(this, "File Error", "Could not open product.txt for writing.");
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString& line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    QMessageBox::information(this, "Deleted", "Product deleted successfully.");
+
+    // Clear delete input and reload table
+    ui->lineEdit_delete->clear();
     on_pushButton_load_clicked();
 }

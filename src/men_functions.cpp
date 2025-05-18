@@ -136,6 +136,37 @@ void viewItems() {
     }
 }
 
+void searchItemById() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty. Nothing to search.\n";
+        return;
+    }
+
+    int id = getValidatedInt("Enter the ID of the item to search: ");
+
+    bool found = false;
+    for (const auto& item : inventory) {
+        if (item.id == id) {
+            found = true;
+            cout << "\n--- Item Found ---\n";
+            cout << left << setw(10) << "ID"
+                 << setw(25) << "Name"
+                 << setw(10) << "Quantity"
+                 << setw(10) << "Price" << "\n";
+            cout << "-----------------------------------------------------------\n";
+            cout << left << setw(10) << item.id
+                 << setw(25) << item.name
+                 << setw(10) << item.quantity
+                 << setw(10) << fixed << setprecision(2) << item.price << "\n";
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Item with ID " << id << " not found.\n";
+    }
+}
+
 void saveInventoryToFile(const string& filename) {
     ofstream outFile(filename);
 

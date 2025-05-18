@@ -33,6 +33,9 @@ int menu() {
                 loadInventoryFromFile("inventory.txt");
                 break;
             case 7:
+                searchItemById();
+                break;
+            case 8:
                 cout << "Exiting program...\n";
                 running = false;
                 break;
@@ -56,5 +59,6 @@ void showMenu() {
     cout << "4. View Items\n";
     cout << "5. Save Inventory to File\n";
     cout << "6. Load Inventory from File\n";
-    cout << "7. Exit\n";
+    cout << "7. Search Item by ID\n";
+    cout << "8. Exit\n";
 }

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-20a7b9005375fbea735d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "digital_inventory_system",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-digital_inventory_system-Debug-ef002d9822329fcda3bd.json",
+					"name" : "digital_inventory_system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-digital_inventory_system_autogen-Debug-f72b4246605015c49a19.json",
+					"name" : "digital_inventory_system_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-digital_inventory_system_autogen_timestamp_deps-Debug-28dddab43919de02adbc.json",
+					"name" : "digital_inventory_system_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build",
+		"source" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

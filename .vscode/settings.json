@@ -45,6 +45,5 @@
         "typeinfo": "cpp",
         "iomanip": "cpp"
     },
-    "cmake.sourceDirectory": "C:/Users/Gab/digital_inventory_system",
-    "C_Cpp.errorSquiggles": "enabled"
+
 }

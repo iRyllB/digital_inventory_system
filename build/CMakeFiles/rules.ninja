@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\cmake\data\bin\cmake.exe --regenerate-during-build -SC:\Users\PC\Desktop\testqt -BC:\Users\PC\Desktop\testqt\build
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\PC\Documents\GitRepository\digital_inventory_system -BC:\Users\PC\Documents\GitRepository\digital_inventory_system\build
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +51,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = C:\Users\PC\AppData\Local\Programs\Python\Python313\Lib\site-packages\cmake\data\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
+  command = "C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
   description = Cleaning additional files...
 
 

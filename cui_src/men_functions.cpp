@@ -8,14 +8,13 @@
 #include "../cui_header/item_input.h"
 #include "../cui_header/confirmation.h"
 
-using namespace std; // <<== GLOBAL std
-
-vector<Item> inventory;
+std::vector<Item> inventory;
 
 //LOAD TO INVENTORY =============================================================================================
 void loadInventoryFromFile() {
-    const string filename = "inventory.txt";
-    ifstream inFile(filename);
+    const std::string filename = "inventory.txt";
+
+    std::ifstream inFile(filename);
     if (!inFile) {
         cout << "Warning: Could not open file '" << filename << "' for reading. Starting with empty inventory.\n";
         return;
@@ -170,18 +169,18 @@ void searchItemById() {
     for (const auto& item : inventory) {
         if (item.id == id) {
             found = true;
-            cout << "\n--- Item Found ---\n";
-            cout << left << setw(10) << "ID"
-                 << setw(25) << "Name"
-                 << setw(20) << "Category"
-                 << setw(10) << "Quantity"
-                 << setw(10) << "Price" << "\n";
-            cout << "--------------------------------------------------------------\n";
-            cout << left << setw(10) << item.id
-                 << setw(25) << item.name
-                 << setw(20) << item.category
-                 << setw(10) << item.quantity
-                 << setw(10) << fixed << setprecision(2) << item.price << "\n";
+            std::cout << "\n--- Item Found ---\n";
+            std::cout << std::left << std::setw(10) << "ID"
+                      << std::setw(25) << "Name"
+                      << std::setw(20) << "Category"
+                      << std::setw(10) << "Quantity"
+                      << std::setw(10) << "Price" << "\n";
+            std::cout << "--------------------------------------------------------------\n";
+            std::cout << std::left << std::setw(10) << item.id
+                      << std::setw(25) << item.name
+                      << std::setw(20) << item.category
+                      << std::setw(10) << item.quantity
+                      << std::setw(10) << std::fixed << std::setprecision(2) << item.price << "\n";
             break;
         }
     }

@@ -19,11 +19,13 @@ bool adminLogin() {
         cout << "2. Exit\n";
         cout << "Select an option: ";
         cin >> choice;
-        cin.ignore(); // To clear newline after reading choice
+        cin.ignore();
 
         if (choice == 2) {
+            
+            return false;  
             if (confirmExit()) {
-                return false;  // Exit confirmed
+                return false;
             } else {
                 cout << "\nExit cancelled. Returning to menu...\n";
                 continue;

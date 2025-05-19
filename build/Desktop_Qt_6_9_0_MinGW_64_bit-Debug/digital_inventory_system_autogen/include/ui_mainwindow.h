@@ -97,6 +97,15 @@ public:
         comboBox_category->addItem(QString());
         comboBox_category->addItem(QString());
         comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
+        comboBox_category->addItem(QString());
         comboBox_category->setObjectName("comboBox_category");
         comboBox_category->setGeometry(QRect(90, 90, 281, 21));
         label_quantity = new QLabel(groupBox_productInfo);
@@ -204,9 +213,18 @@ public:
         label_id->setText(QCoreApplication::translate("MainWindow", "ID:", nullptr));
         label_name->setText(QCoreApplication::translate("MainWindow", "Name:", nullptr));
         label_category->setText(QCoreApplication::translate("MainWindow", "Category:", nullptr));
-        comboBox_category->setItemText(0, QCoreApplication::translate("MainWindow", "TEST CATEGORY", nullptr));
-        comboBox_category->setItemText(1, QCoreApplication::translate("MainWindow", "TEST CATEGORY1", nullptr));
-        comboBox_category->setItemText(2, QCoreApplication::translate("MainWindow", "TEST CATEGORY 2", nullptr));
+        comboBox_category->setItemText(0, QCoreApplication::translate("MainWindow", "Medicine", nullptr));
+        comboBox_category->setItemText(1, QCoreApplication::translate("MainWindow", "Antihistamine", nullptr));
+        comboBox_category->setItemText(2, QCoreApplication::translate("MainWindow", "Anti-Diarrheal", nullptr));
+        comboBox_category->setItemText(3, QCoreApplication::translate("MainWindow", "Antibiotic", nullptr));
+        comboBox_category->setItemText(4, QCoreApplication::translate("MainWindow", "Ointment", nullptr));
+        comboBox_category->setItemText(5, QCoreApplication::translate("MainWindow", "Syrup", nullptr));
+        comboBox_category->setItemText(6, QCoreApplication::translate("MainWindow", "Inhaler", nullptr));
+        comboBox_category->setItemText(7, QCoreApplication::translate("MainWindow", "Supplement", nullptr));
+        comboBox_category->setItemText(8, QCoreApplication::translate("MainWindow", "First Aid", nullptr));
+        comboBox_category->setItemText(9, QCoreApplication::translate("MainWindow", "Equipment", nullptr));
+        comboBox_category->setItemText(10, QCoreApplication::translate("MainWindow", "Protection", nullptr));
+        comboBox_category->setItemText(11, QCoreApplication::translate("MainWindow", "Electrolytes", nullptr));
 
         label_quantity->setText(QCoreApplication::translate("MainWindow", "Quantity:", nullptr));
         label_price->setText(QCoreApplication::translate("MainWindow", "Price:", nullptr));

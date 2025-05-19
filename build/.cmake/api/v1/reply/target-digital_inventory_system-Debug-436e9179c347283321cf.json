@@ -41,7 +41,9 @@
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
+			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake",
+			"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -51,7 +53,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 11,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
@@ -75,13 +77,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 48,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 39,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
@@ -93,7 +95,7 @@
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 4,
+				"line" : 5,
 				"parent" : 0
 			},
 			{
@@ -239,9 +241,35 @@
 				"parent" : 34
 			},
 			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 212,
+				"parent" : 9
+			},
+			{
+				"file" : 15,
+				"parent" : 36
+			},
+			{
+				"command" : 7,
+				"file" : 15,
+				"line" : 55,
+				"parent" : 37
+			},
+			{
+				"file" : 14,
+				"parent" : 38
+			},
+			{
+				"command" : 6,
+				"file" : 14,
+				"line" : 61,
+				"parent" : 39
+			},
+			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 34,
+				"line" : 39,
 				"parent" : 0
 			}
 		]
@@ -272,6 +300,10 @@
 				{
 					"backtrace" : 7,
 					"define" : "QT_NEEDS_QMAIN"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_PRINTSUPPORT_LIB"
 				},
 				{
 					"backtrace" : 6,
@@ -309,7 +341,7 @@
 					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/include"
 				},
 				{
-					"backtrace" : 36,
+					"backtrace" : 41,
 					"path" : "C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers"
 				},
 				{
@@ -341,6 +373,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "C:/VulkanSDK/1.4.313.0/include"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.9.0/mingw_64/include/QtPrintSupport"
 				}
 			],
 			"language" : "CXX",
@@ -358,11 +395,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",
@@ -391,6 +428,11 @@
 			{
 				"fragment" : "-mwindows",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "C:\\Qt\\6.9.0\\mingw_64\\lib\\libQt6PrintSupport.a",
+				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
@@ -450,6 +492,16 @@
 			{
 				"backtrace" : 35,
 				"fragment" : "-ld3d12",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "-lcomdlg32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "-lwinspool",
 				"role" : "libraries"
 			},
 			{

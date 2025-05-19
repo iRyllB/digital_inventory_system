@@ -108,17 +108,62 @@
      </property>
      <item>
       <property name="text">
-       <string>TEST CATEGORY</string>
+       <string>Medicine</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>TEST CATEGORY1</string>
+       <string>Antihistamine</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>TEST CATEGORY 2</string>
+       <string>Anti-Diarrheal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Antibiotic</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ointment</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Syrup</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Inhaler</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Supplement</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>First Aid</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Equipment</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Protection</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Electrolytes</string>
       </property>
      </item>
     </widget>

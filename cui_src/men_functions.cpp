@@ -1,13 +1,23 @@
 #include "../cui_header/men_functions.h"
+#include "../cui_header/validation.h"
+#include "../cui_header/item_display.h"
+#include "../cui_header/file_handling.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <algorithm>
 #include <iomanip>
-#include "../cui_header/validation.h"
-#include "../cui_header/item_display.h"
+#include <fstream>
+#include <locale>
 
 using namespace std;
+
+// Custom facet to add commas to numbers
+struct CommaNumpunct : std::numpunct<char> {
+protected:
+    char do_thousands_sep() const override { return ','; }
+    string do_grouping() const override { return "\3"; }
+};
 
 vector<Item> inventory;
 
@@ -63,7 +73,8 @@ void saveInventoryToFile() {
         return;
     }
 
-    const string filename = "inventory.txt";
+    string filename = generateUniqueFilename("inventory");
+
     ofstream outFile(filename);
     if (!outFile) {
         cout << "Error: Could not open file '" << filename << "' for writing.\n";
@@ -76,7 +87,7 @@ void saveInventoryToFile() {
     }
 
     outFile.close();
-    cout << "Inventory saved to " << filename << " successfully.\n";
+    cout << "Inventory saved to root folder as '" << filename << "' successfully.\n";
 }
 
 // VIEW ITEM =============================================================================================
@@ -98,8 +109,8 @@ void addItem() {
     Item item;
     item.id = getValidatedInt("Enter Item ID (numbers only): ");
 
-    item.name = getUpdatedString("Enter Item Name: ", "");  // no current value, so empty string
-    item.category = getUpdatedString("Enter Category: ", ""); // no current value
+    item.name = getUpdatedString("Enter Item Name: ", ""); 
+    item.category = getUpdatedString("Enter Category: ", "");
 
     item.quantity = getValidatedInt("Enter Quantity: ");
     item.price = getValidatedDouble("Enter Price: ");
@@ -109,33 +120,41 @@ void addItem() {
 }
 
 // UPDATE ITEM =============================================================================================
-void updateItem() {
+void updateStock() {
     if (inventory.empty()) {
-        cout << "Inventory is empty. Cannot update.\n";
+        cout << "Inventory is empty. Cannot update stock.\n";
         return;
     }
 
     printBasicItemList(inventory);
-    int id = getValidatedInt("Enter the ID of the item to update: ");
+    int id = getValidatedInt("Enter the ID of the item to update stock: ");
 
     bool found = false;
     for (auto& item : inventory) {
         if (item.id == id) {
             found = true;
 
-            if (!getUpdateConfirmation()) {
-                cout << "Update cancelled.\n";
-                return;
+            cout << "Selected Item: " << item.name << " | Current Stock: " << item.quantity << "\n";
+
+            cout << "Choose Stock Update Type:\n";
+            cout << "1. Stock In (Add)\n";
+            cout << "2. Stock Out (Deduct)\n";
+            int choice = getValidatedInt("Enter choice (1 or 2): ");
+
+            if (choice == 1) {
+                int addQty = getValidatedStock("Enter quantity to add: ");
+                item.quantity += addQty;
+                cout << "Stock updated. New quantity: " << item.quantity << "\n";
+
+            } else if (choice == 2) {
+                int deductQty = getValidatedDeduction("Enter quantity to deduct: ", item.quantity);
+                item.quantity -= deductQty;
+                cout << "Stock updated. New quantity: " << item.quantity << "\n";
+
+            } else {
+                cout << "Invalid choice. Stock update cancelled.\n";
             }
 
-            cout << "Updating item: " << item.name << "\n";
-
-            item.name = getUpdatedString("Enter new name (or press Enter to keep current): ", item.name);
-            item.category = getUpdatedString("Enter new category (or press Enter to keep current): ", item.category);
-            item.quantity = getUpdatedInt("Enter new quantity (or -1 to keep current): ", item.quantity);
-            item.price = getUpdatedDouble("Enter new price (or -1 to keep current): ", item.price);
-
-            cout << "Item updated successfully!\n";
             break;
         }
     }
@@ -144,6 +163,7 @@ void updateItem() {
         cout << "Item with ID " << id << " not found.\n";
     }
 }
+
 
 // DELETE ITEM =============================================================================================
 void deleteItem() {
@@ -220,4 +240,32 @@ void searchItem() {
             cout << "No item found matching \"" << input << "\" by ID or name.\n";
         }
     }
+}
+
+
+// INVENTORY VALUE =============================================================================================
+
+// Calculate total inventory value (sum of quantity * price)
+double calculateInventoryValue() {
+    double totalValue = 0.0;
+    for (const auto& item : inventory) {
+        totalValue += item.quantity * item.price;
+    }
+    return totalValue;
+}
+
+//DISPLAY
+void displayInventoryValue() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty.\n";
+        return;
+    }
+
+    double total = calculateInventoryValue();
+
+    //Comma formating
+    cout.imbue(locale(cout.getloc(), new CommaNumpunct));
+
+    cout << fixed << setprecision(2);
+    cout << "Total Inventory Value: " << total << " Pesos" << "\n";
 }

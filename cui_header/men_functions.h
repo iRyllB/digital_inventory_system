@@ -16,11 +16,13 @@ struct Item {
 extern std::vector<Item> inventory;
 
 void addItem();
-void updateItem();
+void updateStock();
 void deleteItem();
 void viewItems();
 void searchItem();
 void saveInventoryToFile();
 void loadInventoryFromFile();
+void displayInventoryValue();
+double calculateInventoryValue();
 
 #endif // MEN_FUNCTIONS_H

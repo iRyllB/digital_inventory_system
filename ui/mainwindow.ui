@@ -466,6 +466,19 @@
      <string>Load</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_print">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>210</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Print All Products</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

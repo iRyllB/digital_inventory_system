@@ -5,9 +5,11 @@
 #include <vector>
 using namespace std;
 
+
 struct Item {
     int id;
     string name;
+    string category;
     int quantity;
     double price;
 };

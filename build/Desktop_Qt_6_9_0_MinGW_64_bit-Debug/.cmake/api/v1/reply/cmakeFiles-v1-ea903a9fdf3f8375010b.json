@@ -1164,6 +1164,80 @@
 			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateVersionlessAliasTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessAliasTargets.cmake"
+		},
+		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"

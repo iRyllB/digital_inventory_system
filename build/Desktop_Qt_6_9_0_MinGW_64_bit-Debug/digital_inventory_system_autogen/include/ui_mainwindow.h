@@ -63,6 +63,7 @@ public:
     QPushButton *pushButton_reset_search;
     QPushButton *pushButton_search;
     QPushButton *pushButton_load;
+    QPushButton *pushButton_print;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -183,6 +184,9 @@ public:
         pushButton_load = new QPushButton(centralwidget);
         pushButton_load->setObjectName("pushButton_load");
         pushButton_load->setGeometry(QRect(400, 30, 80, 24));
+        pushButton_print = new QPushButton(centralwidget);
+        pushButton_print->setObjectName("pushButton_print");
+        pushButton_print->setGeometry(QRect(400, 210, 121, 24));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -227,6 +231,7 @@ public:
         pushButton_reset_search->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         pushButton_search->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         pushButton_load->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
+        pushButton_print->setText(QCoreApplication::translate("MainWindow", "Print All Products", nullptr));
     } // retranslateUi
 
 };

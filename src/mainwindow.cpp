@@ -6,6 +6,11 @@
 #include <QFile>
 #include <QTextStream>
 #include <QLocale>
+#include <QFileDialog>
+#include <QtPrintSupport/QPrinter>
+
+#include <QTextDocument>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -471,3 +476,71 @@ void MainWindow::on_pushButton_stockOut_clicked()
 
     QMessageBox::information(this, "Stock Out", "Stock deducted successfully.");
 }
+
+void MainWindow::on_pushButton_print_clicked()
+{
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        return;
+    }
+
+    QTextStream in(&file);
+    double totalValue = 0.0;
+
+    QString html;
+    html += "<h2 style='text-align:center;'>Inventory Report</h2>";
+    html += "<table border='1' cellspacing='0' cellpadding='4' width='100%'>";
+    html += "<tr bgcolor='#f0f0f0'><th>Product ID</th><th>Name</th><th>Category</th><th>Quantity</th><th>Price (₱)</th><th>Value (₱)</th></tr>";
+
+    QString headerLine = in.readLine();  // Skip CSV header
+
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty()) continue;
+
+        QStringList fields = line.split(",");
+        if (fields.size() >= 5) {
+            QString id = fields[0];
+            QString name = fields[1];
+            QString category = fields[2];
+            int quantity = fields[3].toInt();
+            double price = fields[4].toDouble();
+            double value = quantity * price;
+            totalValue += value;
+
+            html += QString("<tr><td>%1</td><td>%2</td><td>%3</td><td align='center'>%4</td><td align='right'>₱%5</td><td align='right'>₱%6</td></tr>")
+                        .arg(id, name, category)
+                        .arg(quantity)
+                        .arg(QString::number(price, 'f', 2))
+                        .arg(QString::number(value, 'f', 2));
+        }
+    }
+
+    file.close();
+
+    QLocale locale(QLocale::English);
+    QString formattedValue = locale.toString(totalValue, 'f', 2);
+
+    html += "</table>";
+    html += QString("<p style='text-align:right; font-weight:bold;'>Total Inventory Value: ₱%1</p>").arg(formattedValue);
+
+    // PDF Printing
+    QString filePath = QFileDialog::getSaveFileName(this, "Save PDF", "inventory_report.pdf", "PDF Files (*.pdf)");
+    if (filePath.isEmpty()) return;
+
+    if (!filePath.endsWith(".pdf", Qt::CaseInsensitive))
+        filePath += ".pdf";
+
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setOutputFileName(filePath);
+    printer.setPageMargins(QMarginsF(15, 15, 15, 15));
+
+    QTextDocument doc;
+    doc.setHtml(html);
+    doc.print(&printer);
+
+    QMessageBox::information(this, "PDF Generated", "Inventory report successfully saved as PDF.");
+}
+

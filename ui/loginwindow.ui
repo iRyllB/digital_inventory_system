@@ -124,6 +124,9 @@
        <height>24</height>
       </rect>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
     </widget>
     <widget class="QPushButton" name="loginButton">
      <property name="geometry">

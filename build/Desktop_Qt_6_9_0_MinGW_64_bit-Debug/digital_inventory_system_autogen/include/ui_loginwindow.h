@@ -72,6 +72,7 @@ public:
         lineEdit_password = new QLineEdit(groupBox);
         lineEdit_password->setObjectName("lineEdit_password");
         lineEdit_password->setGeometry(QRect(120, 140, 191, 24));
+        lineEdit_password->setEchoMode(QLineEdit::EchoMode::Password);
         loginButton = new QPushButton(groupBox);
         loginButton->setObjectName("loginButton");
         loginButton->setGeometry(QRect(90, 200, 80, 24));

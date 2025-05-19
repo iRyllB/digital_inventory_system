@@ -1,11 +1,13 @@
 #include "../cui_header/men_functions.h"
 #include "../cui_header/validation.h"
 #include "../cui_header/item_display.h"
+#include "../cui_header/file_handling.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <algorithm>
 #include <iomanip>
+#include <fstream>
 #include <locale>
 
 using namespace std;
@@ -71,7 +73,8 @@ void saveInventoryToFile() {
         return;
     }
 
-    const string filename = "inventory.txt";
+    string filename = generateUniqueFilename("inventory");
+
     ofstream outFile(filename);
     if (!outFile) {
         cout << "Error: Could not open file '" << filename << "' for writing.\n";
@@ -84,7 +87,7 @@ void saveInventoryToFile() {
     }
 
     outFile.close();
-    cout << "Inventory saved to " << filename << " successfully.\n";
+    cout << "Inventory saved to root folder as '" << filename << "' successfully.\n";
 }
 
 // VIEW ITEM =============================================================================================

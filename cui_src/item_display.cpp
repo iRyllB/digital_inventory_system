@@ -2,39 +2,41 @@
 #include <iostream>
 #include <iomanip>
 
+using namespace std;
+
 void printItemHeader() {
-    std::cout << std::left << std::setw(10) << "ID"
-              << std::setw(25) << "Name"
-              << std::setw(20) << "Category"
-              << std::setw(10) << "Quantity"
-              << std::setw(10) << "Price" << "\n";
-    std::cout << "--------------------------------------------------------------\n";
+    cout << left << setw(10) << "ID"
+         << setw(25) << "Name"
+         << setw(20) << "Category"
+         << setw(10) << "Quantity"
+         << setw(10) << "Price" << "\n";
+    cout << "--------------------------------------------------------------\n";
 }
 
 void printItemRow(const Item& item) {
-    std::cout << std::left << std::setw(10) << item.id
-              << std::setw(25) << item.name
-              << std::setw(20) << item.category
-              << std::setw(10) << item.quantity
-              << std::setw(10) << std::fixed << std::setprecision(2) << item.price << "\n";
+    cout << left << setw(10) << item.id
+         << setw(25) << item.name
+         << setw(20) << item.category
+         << setw(10) << item.quantity
+         << setw(10) << fixed << setprecision(2) << item.price << "\n";
 }
 
-void printInventoryList(const std::vector<Item>& inventory) {
+void printInventoryList(const vector<Item>& inventory) {
     printItemHeader();
     for (const auto& item : inventory) {
         printItemRow(item);
     }
 }
 
-void printBasicItemList(const std::vector<Item>& inventory) {
-    std::cout << std::left << std::setw(10) << "ID"
-              << std::setw(25) << "Name"
-              << std::setw(20) << "Category" << "\n";
-    std::cout << "--------------------------------------------------\n";
+void printBasicItemList(const vector<Item>& inventory) {
+    cout << left << setw(10) << "ID"
+         << setw(25) << "Name"
+         << setw(20) << "Category" << "\n";
+    cout << "--------------------------------------------------\n";
     for (const auto& item : inventory) {
-        std::cout << std::left << std::setw(10) << item.id
-                  << std::setw(25) << item.name
-                  << std::setw(20) << item.category << "\n";
+        cout << left << setw(10) << item.id
+             << setw(25) << item.name
+             << setw(20) << item.category << "\n";
     }
-    std::cout << "--------------------------------------------------\n";
+    cout << "--------------------------------------------------\n";
 }

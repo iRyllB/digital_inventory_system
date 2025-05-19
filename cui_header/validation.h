@@ -1,10 +1,10 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
-
+using namespace std;
 #include <string>
 
-int getValidatedInt(const std::string& prompt);
-double getValidatedDouble(const std::string& prompt);
-bool getDeleteConfirmation(const std::string& prompt);
+int getValidatedInt(const string& prompt);
+double getValidatedDouble(const string& prompt);
+bool getDeleteConfirmation(const string& prompt);
 
 #endif // VALIDATION_H

@@ -14,31 +14,18 @@ int menu() {
         showMenu();
         cout << "Choose an option: ";
         cin >> choice;
-        cin.ignore(); // clear input buffer
+        cin.ignore(); 
 
         switch (choice) {
-            case 1:
-                addItem();
-                break;
-            case 2:
-                updateItem();
-                break;
-            case 3:
-                deleteItem();
-                break;
-            case 4:
-                viewItems();
-                break;
-            case 5:
-                saveInventoryToFile(); 
-                break;                 
-            case 6:
-                loadInventoryFromFile();
-                break;
-            case 7:
-                searchItem();
-                break;
-            case 8:
+            case 1: addItem(); break;
+            case 2: updateStock(); break;
+            case 3: deleteItem(); break;
+            case 4: viewItems(); break;
+            case 5: saveInventoryToFile(); break;
+            case 6: loadInventoryFromFile(); break;
+            case 7: searchItem(); break;
+            case 8: displayInventoryValue(); break;  
+            case 9:
                 if (confirmExit()) {
                     cout << "Exiting program...\n";
                     running = false;
@@ -52,17 +39,20 @@ int menu() {
         }
         cout << endl;
     }
+
     return 0;
 }
 
+//SHOW MENU
 void showMenu() {
     cout << "===== INVENTORY MENU =====\n";
     cout << "1. Add Item\n";
-    cout << "2. Update Item\n";
+    cout << "2. Update Stock\n";
     cout << "3. Delete Item\n";
     cout << "4. View Items\n";
     cout << "5. Save Inventory to File\n";
     cout << "6. Load Inventory from File\n";
     cout << "7. Search Item\n";
-    cout << "8. Exit\n";
+    cout << "8. Display Inventory Value\n";  
+    cout << "9. Exit\n";                      
 }

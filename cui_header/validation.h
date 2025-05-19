@@ -23,4 +23,8 @@ std::string getUpdatedString(const std::string& prompt, const std::string& curre
 int getUpdatedInt(const std::string& prompt, int currentValue);
 double getUpdatedDouble(const std::string& prompt, double currentValue);
 
-#endif 
+// Stock-specific validations
+int getValidatedDeduction(const std::string& prompt, int currentStock);
+int getValidatedStock(const std::string& prompt);
+
+#endif

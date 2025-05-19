@@ -1,9 +1,11 @@
 # ninja log v6
-21	1709	7688495240077913	digital_inventory_system_autogen/timestamp	b4e7ebdef20c57a4
-21	1709	7688495240077913	digital_inventory_system_autogen/mocs_compilation.cpp	b4e7ebdef20c57a4
-21	1709	7688495240077913	C:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/timestamp	b4e7ebdef20c57a4
-21	1709	7688495240077913	C:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/mocs_compilation.cpp	b4e7ebdef20c57a4
-1741	9386	7688495241411954	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	b8099c376ee4b20e
-1748	9406	7688495241578231	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	ec2e1ecab69506b5
-1763	9991	7688495241698178	CMakeFiles/digital_inventory_system.dir/mainwindow.cpp.obj	1d7fe552f742d810
-9994	10801	7688495324004657	digital_inventory_system.exe	e4bbe9f1a14eddf3
+62	1830	7691959025493725	digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
+62	1830	7691959025493725	digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
+62	1830	7691959025493725	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/mocs_compilation.cpp	ca3d5809a4554dcb
+62	1830	7691959025493725	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/timestamp	ca3d5809a4554dcb
+1833	9469	7691959026447278	CMakeFiles/digital_inventory_system.dir/digital_inventory_system_autogen/mocs_compilation.cpp.obj	29e458b653918660
+1847	11772	7691959026677888	CMakeFiles/digital_inventory_system.dir/src/mainwindow.cpp.obj	925cf6fb77d1bfee
+2437	13417	7691931543756877	CMakeFiles/digital_inventory_system.dir/main.cpp.obj	7a9c6f4c7c656ce8
+1840	10575	7691959026607897	CMakeFiles/digital_inventory_system.dir/src/loginwindow.cpp.obj	a6d6e5127bc8aaa7
+11774	12448	7691959125864543	digital_inventory_system.exe	11fae30aa56eeee4
+2459	13462	7691931543923132	CMakeFiles/digital_inventory_system.dir/src/exitconfirmation.cpp.obj	8f5c2edd953df798

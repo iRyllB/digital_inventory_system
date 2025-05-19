@@ -43,8 +43,12 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "cstdarg": "cpp",
+        "ctime": "cpp",
+        "fstream": "cpp",
+        "ranges": "cpp",
+        "sstream": "cpp"
     },
-    "cmake.sourceDirectory": "C:/Users/PC/Documents/GitRepository/digital_inventory_system/digital_inventory_system",
-    "C_Cpp.errorSquiggles": "enabled"
+
 }

@@ -1,4 +1,42 @@
 digital_inventory_system_autogen/timestamp: \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/CheckLibraryExists.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/GNU.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindVulkan.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake \
+	C:/Program\ Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
@@ -541,52 +579,19 @@ digital_inventory_system_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeGenericSystem.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeRCInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckLibraryExists.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Compiler/GNU.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindPackageMessage.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindThreads.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindVulkan.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/GNUInstallDirs.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Linker/Windows-CXX.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows-windres.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/Windows.cmake \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake \
-	C:/Users/PC/Desktop/testqt/CMakeLists.txt \
-	C:/Users/PC/Desktop/testqt/build/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake \
-	C:/Users/PC/Desktop/testqt/build/CMakeFiles/4.0.0/CMakeRCCompiler.cmake \
-	C:/Users/PC/Desktop/testqt/build/CMakeFiles/4.0.0/CMakeSystem.cmake \
-	C:/Users/PC/Desktop/testqt/build/digital_inventory_system_autogen/moc_predefs.h \
-	C:/Users/PC/Desktop/testqt/main.cpp \
-	C:/Users/PC/Desktop/testqt/mainwindow.cpp \
-	C:/Users/PC/Desktop/testqt/mainwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/CMakeLists.txt \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/4.0.2/CMakeRCCompiler.cmake \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/CMakeFiles/4.0.2/CMakeSystem.cmake \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/build/digital_inventory_system_autogen/moc_predefs.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/exitconfirmation.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/loginwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/headers/mainwindow.h \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/main.cpp \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/exitconfirmation.cpp \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/loginwindow.cpp \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/src/mainwindow.cpp \
 	c:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/qt.toolchain.cmake \
-	C:/Users/PC/Desktop/testqt/mainwindow.ui \
-	C:/Users/PC/AppData/Local/Programs/Python/Python313/Lib/site-packages/cmake/data/bin/cmake.exe
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/ui/loginwindow.ui \
+	C:/Users/PC/Documents/GitRepository/digital_inventory_system/ui/mainwindow.ui \
+	C:/Program\ Files/CMake/bin/cmake.exe

@@ -2,6 +2,7 @@
 #include <string>
 #include "../cui_header/login.h"
 #include "../cui_header/menu.h"
+#include "../cui_header/confirmation.h"
 
 using namespace std;
 
@@ -11,35 +12,38 @@ bool adminLogin() {
     string correctPassword = "1234";
 
     int choice;
-    
-    // Loop to allow retrying login
+
     while (true) {
         cout << "===== ADMIN PANEL =====\n";
         cout << "1. Login\n";
         cout << "2. Exit\n";
         cout << "Select an option: ";
         cin >> choice;
+        cin.ignore(); // To clear newline after reading choice
 
         if (choice == 2) {
-            cout << "\nExiting...\n";
-            return false;  
+            if (confirmExit()) {
+                return false;  // Exit confirmed
+            } else {
+                cout << "\nExit cancelled. Returning to menu...\n";
+                continue;
+            }
         } else if (choice != 1) {
             cout << "\nInvalid choice. Please select again.\n";
-            continue; 
+            continue;
         }
 
-        // Proceed with login
         cout << "\n===== ADMIN LOGIN =====\n";
         cout << "Username: ";
-        cin >> username;
+        getline(cin, username);  //  for username input
 
         cout << "Password: ";
-        cin >> password;
+        getline(cin, password);  //  for password input
 
         if (username == correctUsername && password == correctPassword) {
             cout << "\nAccess Granted. Welcome, Admin!\n";
-            menu();  // Proceed to the menu
-            return true;  // Login successful
+            menu();
+            return true;
         } else {
             cout << "\nAccess Denied. Invalid Credentials.\n";
         }

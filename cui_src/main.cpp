@@ -1,15 +1,7 @@
 #include <iostream>
 #include "../cui_header/login.h" 
-#include "../cui_header/login.h"  
-
-using namespace std;
+#include "../cui_header/confirmation.h"
 
 int main() {
-    if (adminLogin()) {
-        cout << "Alawabalou\n";
-    } else {
-        cout << "Exiting program...\n";
-    }
-
-    return 0;
+    return adminLogin() ? 0 : 1; //START PROGRAM
 }

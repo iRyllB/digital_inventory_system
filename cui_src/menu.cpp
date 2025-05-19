@@ -1,5 +1,6 @@
 #include "../cui_header/menu.h"
 #include "../cui_header/men_functions.h"
+#include "../cui_header/confirmation.h"
 #include <iostream>
 using namespace std;
 
@@ -29,17 +30,21 @@ int menu() {
                 viewItems();
                 break;
             case 5:
-                saveInventoryToFile();  // no parameter here
-                break;                  // IMPORTANT: break to avoid fallthrough
+                saveInventoryToFile(); 
+                break;                 
             case 6:
                 loadInventoryFromFile();
                 break;
             case 7:
-                searchItemById();
+                searchItem();
                 break;
             case 8:
-                cout << "Exiting program...\n";
-                running = false;
+                if (confirmExit()) {
+                    cout << "Exiting program...\n";
+                    running = false;
+                } else {
+                    cout << "Exit cancelled. Returning to menu...\n";
+                }
                 break;
             default:
                 cout << "Invalid option, please try again.\n";
@@ -58,6 +63,6 @@ void showMenu() {
     cout << "4. View Items\n";
     cout << "5. Save Inventory to File\n";
     cout << "6. Load Inventory from File\n";
-    cout << "7. Search Item by ID\n";
+    cout << "7. Search Item\n";
     cout << "8. Exit\n";
 }

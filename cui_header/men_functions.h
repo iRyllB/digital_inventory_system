@@ -19,7 +19,7 @@ void addItem();
 void updateItem();
 void deleteItem();
 void viewItems(); 
-void searchItemById(); // Add this line
+void searchItem();
 void saveInventoryToFile();
 void loadInventoryFromFile();
 

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include <iomanip>
 #include "../cui_header/validation.h"
 #include "../cui_header/item_display.h"
@@ -157,40 +158,53 @@ void deleteItem() {
 }
 
 //SEARCH ITEM =============================================================================================
-void searchItemById() {
+void searchItem() {
     if (inventory.empty()) {
         cout << "Inventory is empty. Nothing to search.\n";
         return;
     }
 
-    int id = getValidatedInt("Enter the ID of the item to search: ");
+    cout << "Enter Item ID or Name to search: ";
+    string input;
+    getline(cin, input);
+
+    bool isId = !input.empty() && all_of(input.begin(), input.end(), ::isdigit);
 
     bool found = false;
-    for (const auto& item : inventory) {
-        if (item.id == id) {
-            found = true;
-            std::cout << "\n--- Item Found ---\n";
-            std::cout << std::left << std::setw(10) << "ID"
-                      << std::setw(25) << "Name"
-                      << std::setw(20) << "Category"
-                      << std::setw(10) << "Quantity"
-                      << std::setw(10) << "Price" << "\n";
-            std::cout << "--------------------------------------------------------------\n";
-            std::cout << std::left << std::setw(10) << item.id
-                      << std::setw(25) << item.name
-                      << std::setw(20) << item.category
-                      << std::setw(10) << item.quantity
-                      << std::setw(10) << std::fixed << std::setprecision(2) << item.price << "\n";
-            break;
+
+    if (isId) {
+        int id = stoi(input);
+        for (const auto& item : inventory) {
+            if (item.id == id) {
+                cout << "\n--- Item Found (by ID) ---\n";
+                printItemHeader();
+                printItemRow(item);
+                found = true;
+                break;
+            }
         }
     }
 
     if (!found) {
-        cout << "Item with ID " << id << " not found.\n";
-    }
-}
+        string lowerInput = input;
+        transform(lowerInput.begin(), lowerInput.end(), lowerInput.begin(), ::tolower);
 
-//EXIT PROGRAM WITH CONFIRMATION =======================================================================
-bool confirmExit() {
-    return getYesNoConfirmation("Are you sure you want to exit? (Y/N): ");
+        for (const auto& item : inventory) {
+            string itemName = item.name;
+            transform(itemName.begin(), itemName.end(), itemName.begin(), ::tolower);
+
+            if (itemName == lowerInput) {
+                if (!found) {
+                    cout << "\n--- Matching Items (by Name) ---\n";
+                    printItemHeader();
+                }
+                printItemRow(item);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            cout << "No item found matching \"" << input << "\" by ID or name.\n";
+        }
+    }
 }

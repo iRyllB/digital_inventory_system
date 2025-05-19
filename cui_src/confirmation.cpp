@@ -1,13 +1,13 @@
-#include "../cui_header/confirmation.h"
 #include <iostream>
 #include <string>
-#include <cctype>
+#include <cctype>  // for tolower()
 using namespace std;
+
 bool getYesNoConfirmation(const string& prompt) {
     while (true) {
         cout << prompt;
         string response;
-        getline(cin, response);
+        getline(cin, response);  
         if (response.empty()) continue;
 
         char ch = tolower(response[0]);
@@ -17,3 +17,8 @@ bool getYesNoConfirmation(const string& prompt) {
         cout << "Please enter 'Y' or 'N'.\n";
     }
 }
+
+bool confirmExit() {
+    return getYesNoConfirmation("Are you sure you want to exit? (Y/N): ");
+}
+

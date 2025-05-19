@@ -4,5 +4,6 @@ using namespace std;
 #define CONFIRMATION_H
 
 bool getYesNoConfirmation(const string& prompt);
+bool confirmExit();
 
 #endif

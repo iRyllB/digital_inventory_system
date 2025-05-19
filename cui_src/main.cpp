@@ -5,12 +5,7 @@
 using namespace std;
 
 int main() {
-    if (adminLogin()) {
-        cout << "Alawabalou\n";
-    } else {
-        cout << "Exiting program...\n";
-        // Optionally exit or prompt for login again
-    }
-
+    adminLogin();
+    cout << "Exiting program...\n";
     return 0;
 }

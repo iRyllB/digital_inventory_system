@@ -21,7 +21,7 @@ bool adminLogin() {
         cin >> choice;
 
         if (choice == 2) {
-            cout << "\nExiting...\n";
+            
             return false;  
         } else if (choice != 1) {
             cout << "\nInvalid choice. Please select again.\n";

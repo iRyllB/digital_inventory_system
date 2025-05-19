@@ -18,7 +18,7 @@ void printItemRow(const Item& item) {
          << setw(25) << item.name
          << setw(20) << item.category
          << setw(10) << item.quantity
-         << setw(10) << fixed << setprecision(2) <<"₱ "<< item.price << "\n";
+         << setw(10) << fixed << setprecision(2)<< item.price << "\n";
 }
 
 void printInventoryList(const vector<Item>& inventory) {

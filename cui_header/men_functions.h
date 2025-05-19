@@ -5,7 +5,6 @@
 #include <vector>
 using namespace std;
 
-
 struct Item {
     int id;
     string name;
@@ -21,6 +20,7 @@ void updateItem();
 void deleteItem();
 void viewItems(); 
 void searchItemById(); // Add this line
-void saveInventoryToFile(const string& filename);
-void loadInventoryFromFile(const string& filename);
+void saveInventoryToFile();
+void loadInventoryFromFile();
+
 #endif // MEN_FUNCTIONS_H

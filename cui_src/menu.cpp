@@ -1,5 +1,6 @@
+#include "../cui_header/menu.h"
+#include "../cui_header/men_functions.h"
 #include <iostream>
-#include "../headers/men_functions.h"
 using namespace std;
 
 void showMenu();
@@ -9,9 +10,10 @@ int menu() {
     bool running = true;
 
     while (running) {
-        showMenu();  // Display the menu
+        showMenu();
         cout << "Choose an option: ";
         cin >> choice;
+        cin.ignore(); // clear input buffer
 
         switch (choice) {
             case 1:
@@ -24,13 +26,13 @@ int menu() {
                 deleteItem();
                 break;
             case 4:
-                viewItems(); 
+                viewItems();
                 break;
             case 5:
-                saveInventoryToFile("inventory.txt");
-                break;
+                saveInventoryToFile();  // no parameter here
+                break;                  // IMPORTANT: break to avoid fallthrough
             case 6:
-                loadInventoryFromFile("inventory.txt");
+                loadInventoryFromFile();
                 break;
             case 7:
                 searchItemById();
@@ -43,14 +45,11 @@ int menu() {
                 cout << "Invalid option, please try again.\n";
                 break;
         }
-
         cout << endl;
     }
-
     return 0;
 }
 
-// Show Menu
 void showMenu() {
     cout << "===== INVENTORY MENU =====\n";
     cout << "1. Add Item\n";

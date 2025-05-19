@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "../headers/login.h"
-#include "../headers/menu.h"
+#include "../cui_header/login.h"
+#include "../cui_header/menu.h"
 
 using namespace std;
 

@@ -1,5 +1,25 @@
-
-12
-OTIN
-323
-23
+ProductID,ProductName,Category,Quantity,Price(₱)
+201,Paracetamol,Medicine,51,84.00
+202,Ibuprofen,Medicine,30,112.00
+203,Cetirizine,Antihistamine,40,67.20
+204,Loperamide,Anti-Diarrheal,25,50.40
+205,Amoxicillin,Antibiotic,60,168.00
+206,Hydrocortisone Cream,Ointment,20,140.00
+207,Cough Syrup,Syrup,35,123.20
+208,Salbutamol Inhaler,Inhaler,15,322.00
+209,Vitamin C Tablets,Supplement,100,44.80
+210,Bandages,First Aid,200,14.00
+211,Alcohol 70%,First Aid,150,39.20
+212,Digital Thermometer,Equipment,20,280.00
+213,Face Mask (Box),Protection,50,196.00
+214,Hand Sanitizer 100ml,Protection,80,84.00
+215,Mefenamic Acid,Medicine,45,78.40
+216,Loratadine,Antihistamine,35,56.00
+218,Clotrimazole Cream,Ointment,18,112.00
+219,Cotton Balls (Pack),First Aid,70,22.40
+220,Betadine Solution,First Aid,40,134.40
+221,Blood Pressure Monitor,Equipment,10,1232.00
+222,Multivitamins,Supplement,90,89.60
+223,Cough Drops (Pack),Syrup,100,16.80
+224,Diabetes Test Strips,Diagnostic,25,560.00
+225,Antacid Tablets,Stomach Relief,50,39.20

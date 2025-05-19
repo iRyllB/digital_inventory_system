@@ -1,11 +1,11 @@
 #include <iostream>
-#include "../cui_header/login.h"  // Correct path to login.h
-#include "../cui_header/login.h"  // Make sure the path to login.h is correct
-
-using namespace std;
+#include "../cui_header/login.h" 
 
 int main() {
+
     adminLogin();
-    cout << "Exiting program...\n";
+    std::cout << "Exiting program...\n";
     return 0;
+
+    return adminLogin() ? 0 : 1; //START PROGRAM
 }

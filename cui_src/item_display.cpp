@@ -40,3 +40,35 @@ void printBasicItemList(const vector<Item>& inventory) {
     }
     cout << "--------------------------------------------------\n";
 }
+
+//PARSE LINE TO ITEM
+bool parseLineToItem(const string& line, Item& item) {
+    stringstream ss(line);
+    string idStr, quantityStr, priceStr;
+
+    getline(ss, idStr, ',');
+    getline(ss, item.name, ',');
+    getline(ss, item.category, ',');
+    getline(ss, quantityStr, ',');
+    getline(ss, priceStr, ',');
+
+    try {
+        item.id = stoi(idStr);
+        item.quantity = stoi(quantityStr);
+        item.price = stod(priceStr);
+        return true;
+    } catch (...) {
+        return false;
+    }
+}
+
+//FORMAT TO CSV
+string formatItemToCSV(const Item& item) { 
+    stringstream ss;
+    ss << item.id << ","
+       << item.name << ","
+       << item.category << ","
+       << item.quantity << ","
+       << fixed << setprecision(2) << item.price;
+    return ss.str();
+}

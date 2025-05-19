@@ -1,5 +1,5 @@
 ProductID,ProductName,Category,Quantity,Price(₱)
-201,Paracetamol,Medicine,50,84.00
+201,Paracetamol,Medicine,51,84.00
 202,Ibuprofen,Medicine,30,112.00
 203,Cetirizine,Antihistamine,40,67.20
 204,Loperamide,Anti-Diarrheal,25,50.40

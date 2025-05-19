@@ -12,9 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow){
     ui->setupUi(this);
 
-    // Lock the window size
-    this->setFixedSize(625, 650);
-
     // Optional: Connect buttons to functions here
     // connect(ui->pushButton_add, &QPushButton::clicked, this, &MainWindow::onAddProduct);
 }
@@ -341,4 +338,136 @@ void MainWindow::on_pushButton_calculate_clicked()
     QString formattedValue = locale.toString(totalValue, 'f', 2);  // e.g., "12,345.67"
 
     ui->label_totalValue->setText("₱" + formattedValue);
+}
+
+void MainWindow::on_pushButton_stockIn_clicked()
+{
+    QString targetID = ui->lineEdit_id_2->text().trimmed();
+    int addQty = ui->spinBox_quantity_2->value();
+
+    if (targetID.isEmpty() || addQty <= 0) {
+        QMessageBox::warning(this, "Invalid Input", "Please enter a valid Product ID and Quantity.");
+        return;
+    }
+
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) return;
+
+    QStringList lines;
+    QTextStream in(&file);
+    QString header = in.readLine();
+    lines << header;
+
+    bool found = false;
+    int rowToUpdate = -1;
+
+    for (int row = 0; !in.atEnd(); ++row) {
+        QString line = in.readLine();
+        QStringList parts = line.split(',');
+
+        if (parts.size() >= 5 && parts[0] == targetID) {
+            int currentQty = parts[3].toInt();
+            int newQty = currentQty + addQty;
+            parts[3] = QString::number(newQty);
+            line = parts.join(',');
+
+            // Update the tableWidget
+            for (int i = 0; i < ui->tableWidget_products->rowCount(); ++i) {
+                if (ui->tableWidget_products->item(i, 0)->text() == targetID) {
+                    ui->tableWidget_products->item(i, 3)->setText(QString::number(newQty));
+                    break;
+                }
+            }
+
+            found = true;
+        }
+
+        lines << line;
+    }
+    file.close();
+
+    if (!found) {
+        QMessageBox::warning(this, "Not Found", "Product ID not found.");
+        return;
+    }
+
+    // Save updated file
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        QTextStream out(&file);
+        for (const QString &line : lines) {
+            out << line << "\n";
+        }
+        file.close();
+    }
+
+    QMessageBox::information(this, "Stock In", "Stock added successfully.");
+}
+
+
+void MainWindow::on_pushButton_stockOut_clicked()
+{
+    QString targetID = ui->lineEdit_id_2->text().trimmed();
+    int outQty = ui->spinBox_quantity_2->value();
+
+    if (targetID.isEmpty() || outQty <= 0) {
+        QMessageBox::warning(this, "Invalid Input", "Please enter a valid Product ID and Quantity.");
+        return;
+    }
+
+    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) return;
+
+    QStringList lines;
+    QTextStream in(&file);
+    QString header = in.readLine();
+    lines << header;
+
+    bool found = false;
+    int currentQty = 0;
+
+    for (int row = 0; !in.atEnd(); ++row) {
+        QString line = in.readLine();
+        QStringList parts = line.split(',');
+
+        if (parts.size() >= 5 && parts[0] == targetID) {
+            currentQty = parts[3].toInt();
+            if (currentQty < outQty) {
+                QMessageBox::warning(this, "Stock Out Error", "Insufficient stock to deduct.");
+                return;
+            }
+
+            int newQty = currentQty - outQty;
+            parts[3] = QString::number(newQty);
+            line = parts.join(',');
+
+            // Update the tableWidget
+            for (int i = 0; i < ui->tableWidget_products->rowCount(); ++i) {
+                if (ui->tableWidget_products->item(i, 0)->text() == targetID) {
+                    ui->tableWidget_products->item(i, 3)->setText(QString::number(newQty));
+                    break;
+                }
+            }
+
+            found = true;
+        }
+
+        lines << line;
+    }
+    file.close();
+
+    if (!found) {
+        QMessageBox::warning(this, "Not Found", "Product ID not found.");
+        return;
+    }
+
+    // Save updated file
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        QTextStream out(&file);
+        for (const QString &line : lines) {
+            out << line << "\n";
+        }
+        file.close();
+    }
+
+    QMessageBox::information(this, "Stock Out", "Stock deducted successfully.");
 }

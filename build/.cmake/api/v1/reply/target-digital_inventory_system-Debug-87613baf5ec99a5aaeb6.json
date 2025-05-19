@@ -358,11 +358,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
+			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "digital_inventory_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "digital_inventory_system_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "digital_inventory_system::@6890427a1f51a3e7e1df",

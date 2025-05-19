@@ -3,10 +3,14 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
-#include "../cui_header/validation.h" // Your input validation functions
+#include "../cui_header/validation.h"
+#include "../cui_header/item_display.h"
+#include "../cui_header/item_input.h"
+#include "../cui_header/confirmation.h"
 
 std::vector<Item> inventory;
 
+//LOAD TO INVENTORY =============================================================================================
 void loadInventoryFromFile() {
     const std::string filename = "inventory.txt";
 
@@ -46,6 +50,7 @@ void loadInventoryFromFile() {
     std::cout << "Inventory loaded from " << filename << " successfully.\n";
 }
 
+//SAVE TO INVENTORY ITEM =============================================================================================
 void saveInventoryToFile() {
     const std::string filename = "inventory.txt";
     std::ofstream outFile(filename);
@@ -68,29 +73,16 @@ void saveInventoryToFile() {
     std::cout << "Inventory saved to " << filename << " successfully.\n";
 }
 
+//VIEW ITEM =============================================================================================
 void viewItems() {
     if (inventory.empty()) {
         std::cout << "Inventory is empty.\n";
         return;
     }
-
-    std::cout << "\n--- Inventory List ---\n";
-    std::cout << std::left << std::setw(10) << "ID"
-              << std::setw(25) << "Name"
-              << std::setw(20) << "Category"
-              << std::setw(10) << "Quantity"
-              << std::setw(10) << "Price" << "\n";
-    std::cout << "--------------------------------------------------------------\n";
-
-    for (const auto& item : inventory) {
-        std::cout << std::left << std::setw(10) << item.id
-                  << std::setw(25) << item.name
-                  << std::setw(20) << item.category
-                  << std::setw(10) << item.quantity
-                  << std::setw(10) << std::fixed << std::setprecision(2) << item.price << "\n";
-    }
+    printInventoryList(inventory);
 }
 
+//ADD ITEM ===============================================================================================
 void addItem() {
     Item item;
     item.id = getValidatedInt("Enter Item ID (numbers only): ");
@@ -108,21 +100,14 @@ void addItem() {
     std::cout << "Item added successfully!\n";
 }
 
+//UPDATE ITEM =============================================================================================
 void updateItem() {
     if (inventory.empty()) {
         std::cout << "Inventory is empty. Cannot update.\n";
         return;
     }
 
-    std::cout << "\n--- Available Items ---\n";
-    std::cout << std::left << std::setw(10) << "ID" << std::setw(25) << "Name" << std::setw(20) << "Category" << "\n";
-    std::cout << "--------------------------------------------------\n";
-    for (const auto& item : inventory) {
-        std::cout << std::left << std::setw(10) << item.id
-                  << std::setw(25) << item.name
-                  << std::setw(20) << item.category << "\n";
-    }
-    std::cout << "--------------------------------------------------\n";
+    printBasicItemList(inventory);
 
     int id = getValidatedInt("Enter the ID of the item to update: ");
 
@@ -132,31 +117,10 @@ void updateItem() {
             found = true;
             std::cout << "Updating item: " << item.name << "\n";
 
-            std::cout << "Enter new name (or press Enter to keep current): ";
-            std::string newName;
-            std::getline(std::cin, newName);
-            if (!newName.empty()) {
-                item.name = newName;
-            }
-
-            std::cout << "Enter new category (or press Enter to keep current): ";
-            std::string newCategory;
-            std::getline(std::cin, newCategory);
-            if (!newCategory.empty()) {
-                item.category = newCategory;
-            }
-
-            std::cout << "Enter new quantity (or -1 to keep current): ";
-            int newQuantity = getValidatedInt("");
-            if (newQuantity != -1) {
-                item.quantity = newQuantity;
-            }
-
-            std::cout << "Enter new price (or -1 to keep current): ";
-            double newPrice = getValidatedDouble("");
-            if (newPrice != -1) {
-                item.price = newPrice;
-            }
+            item.name = getUpdatedString("Enter new name (or press Enter to keep current): ", item.name);
+            item.category = getUpdatedString("Enter new category (or press Enter to keep current): ", item.category);
+            item.quantity = getUpdatedInt("Enter new quantity (or -1 to keep current): ", item.quantity);
+            item.price = getUpdatedDouble("Enter new price (or -1 to keep current): ", item.price);
 
             std::cout << "Item updated successfully!\n";
             break;
@@ -168,29 +132,26 @@ void updateItem() {
     }
 }
 
+//DELETE ITEM =============================================================================================
 void deleteItem() {
     if (inventory.empty()) {
         std::cout << "Cannot delete: No items in the inventory.\n";
         return;
     }
 
-    std::cout << "\n--- Available Items ---\n";
-    std::cout << std::left << std::setw(10) << "ID" << std::setw(25) << "Name" << std::setw(20) << "Category" << "\n";
-    std::cout << "--------------------------------------------------\n";
-    for (const auto& item : inventory) {
-        std::cout << std::left << std::setw(10) << item.id
-                  << std::setw(25) << item.name
-                  << std::setw(20) << item.category << "\n";
-    }
-    std::cout << "--------------------------------------------------\n";
+    printBasicItemList(inventory);
 
     int id = getValidatedInt("Enter the ID of the item to delete: ");
 
     for (auto it = inventory.begin(); it != inventory.end(); ++it) {
         if (it->id == id) {
-            std::cout << "Deleting item: " << it->name << "\n";
-            inventory.erase(it);
-            std::cout << "Item deleted successfully!\n";
+            if (getYesNoConfirmation("Are you sure you want to delete this item? (Y/N): ")) {
+                std::cout << "Deleting item: " << it->name << "\n";
+                inventory.erase(it);
+                std::cout << "Item deleted successfully!\n";
+            } else {
+                std::cout << "Deletion cancelled.\n";
+            }
             return;
         }
     }
@@ -198,6 +159,7 @@ void deleteItem() {
     std::cout << "Item with ID " << id << " not found.\n";
 }
 
+//SEARCH ITEM =============================================================================================
 void searchItemById() {
     if (inventory.empty()) {
         std::cout << "Inventory is empty. Nothing to search.\n";

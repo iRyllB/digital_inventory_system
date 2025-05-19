@@ -5,5 +5,6 @@
 
 int getValidatedInt(const std::string& prompt);
 double getValidatedDouble(const std::string& prompt);
+bool getDeleteConfirmation(const std::string& prompt);
 
 #endif // VALIDATION_H

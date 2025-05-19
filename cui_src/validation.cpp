@@ -33,3 +33,20 @@ double getValidatedDouble(const string& prompt) {
         }
     }
 }
+
+bool getDeleteConfirmation(const std::string& prompt) {
+    char response;
+    while (true) {
+        std::cout << prompt;
+        if (std::cin >> response) {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            response = std::tolower(response);
+            if (response == 'y') return true;
+            else if (response == 'n') return false;
+        }
+        std::cout << "Invalid input. Please enter 'Y' or 'N'.\n";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+}
+

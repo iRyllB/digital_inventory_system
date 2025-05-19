@@ -3,22 +3,22 @@
 
 #include <iostream>
 #include <vector>
-using namespace std;
+#include <string>  // explicitly include string
 
 struct Item {
     int id;
-    string name;
-    string category;
+    std::string name;
+    std::string category;
     int quantity;
     double price;
 };
 
-extern vector<Item> inventory;
+extern std::vector<Item> inventory;
 
 void addItem();
 void updateItem();
 void deleteItem();
-void viewItems(); 
+void viewItems();
 void searchItem();
 void saveInventoryToFile();
 void loadInventoryFromFile();

@@ -1,10 +1,26 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
-using namespace std;
+
 #include <string>
 
-int getValidatedInt(const string& prompt);
-double getValidatedDouble(const string& prompt);
-bool getDeleteConfirmation(const string& prompt);
+// Basic validated inputs
+int getValidatedInt(const std::string& prompt);
+double getValidatedDouble(const std::string& prompt);
 
-#endif // VALIDATION_H
+// Yes/No confirmation
+bool getYesNoConfirmation(const std::string& prompt);
+
+// Common confirmation wrappers
+bool getAddConfirmation();
+bool getUpdateConfirmation();
+bool getSaveConfirmation();
+bool getLoadConfirmation();
+bool getDeleteConfirmation();
+bool confirmExit();
+
+// Updated input helpers (allow empty or -1 to keep current value)
+std::string getUpdatedString(const std::string& prompt, const std::string& currentValue);
+int getUpdatedInt(const std::string& prompt, int currentValue);
+double getUpdatedDouble(const std::string& prompt, double currentValue);
+
+#endif 

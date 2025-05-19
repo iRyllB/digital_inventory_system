@@ -6,16 +6,33 @@
 #include <iomanip>
 #include "../cui_header/validation.h"
 #include "../cui_header/item_display.h"
-#include "../cui_header/item_input.h"
-#include "../cui_header/confirmation.h"
 
-std::vector<Item> inventory;
+using namespace std;
 
-//LOAD TO INVENTORY =============================================================================================
+vector<Item> inventory;
+
+// LOAD TO INVENTORY =============================================================================================
 void loadInventoryFromFile() {
-    const std::string filename = "inventory.txt";
+    if (!getLoadConfirmation()) {
+        cout << "Load cancelled.\n";
+        return;
+    }
 
-    std::ifstream inFile(filename);
+    string filename;
+    while (true) {
+        cout << "Enter filename to load inventory from: ";
+        getline(cin, filename);
+
+        ifstream testFile(filename);
+        if (testFile.good()) {
+            testFile.close();
+            break; 
+        } else {
+            cout << "File not found or cannot be opened. Please try again.\n";
+        }
+    }
+
+    ifstream inFile(filename);
     if (!inFile) {
         cout << "Warning: Could not open file '" << filename << "' for reading. Starting with empty inventory.\n";
         return;
@@ -27,22 +44,10 @@ void loadInventoryFromFile() {
     getline(inFile, line); // skip header
 
     while (getline(inFile, line)) {
-        stringstream ss(line);
         Item item;
-        string idStr, quantityStr, priceStr;
-
-        getline(ss, idStr, ',');
-        getline(ss, item.name, ',');
-        getline(ss, item.category, ',');
-        getline(ss, quantityStr, ',');
-        getline(ss, priceStr, ',');
-
-        try {
-            item.id = stoi(idStr);
-            item.quantity = stoi(quantityStr);
-            item.price = stod(priceStr);
+        if (parseLineToItem(line, item)) {
             inventory.push_back(item);
-        } catch (...) {
+        } else {
             cout << "Error parsing line: " << line << "\n";
         }
     }
@@ -51,8 +56,13 @@ void loadInventoryFromFile() {
     cout << "Inventory loaded from " << filename << " successfully.\n";
 }
 
-//SAVE TO INVENTORY =============================================================================================
+// SAVE TO INVENTORY =============================================================================================
 void saveInventoryToFile() {
+    if (!getSaveConfirmation()) {
+        cout << "Save cancelled.\n";
+        return;
+    }
+
     const string filename = "inventory.txt";
     ofstream outFile(filename);
     if (!outFile) {
@@ -62,18 +72,14 @@ void saveInventoryToFile() {
 
     outFile << "ProductID,ProductName,Category,Quantity,Price(₱)\n";
     for (const auto& item : inventory) {
-        outFile << item.id << ","
-                << item.name << ","
-                << item.category << ","
-                << item.quantity << ","
-                << fixed << setprecision(2) << item.price << "\n";
+        outFile << formatItemToCSV(item) << "\n";
     }
 
     outFile.close();
     cout << "Inventory saved to " << filename << " successfully.\n";
 }
 
-//VIEW ITEM =============================================================================================
+// VIEW ITEM =============================================================================================
 void viewItems() {
     if (inventory.empty()) {
         cout << "Inventory is empty.\n";
@@ -82,16 +88,18 @@ void viewItems() {
     printInventoryList(inventory);
 }
 
-//ADD ITEM ===============================================================================================
+// ADD ITEM ===============================================================================================
 void addItem() {
+    if (!getAddConfirmation()) {
+        cout << "Add item cancelled.\n";
+        return;
+    }
+
     Item item;
     item.id = getValidatedInt("Enter Item ID (numbers only): ");
 
-    cout << "Enter Item Name: ";
-    getline(cin, item.name);
-
-    cout << "Enter Category: ";
-    getline(cin, item.category);
+    item.name = getUpdatedString("Enter Item Name: ", "");  // no current value, so empty string
+    item.category = getUpdatedString("Enter Category: ", ""); // no current value
 
     item.quantity = getValidatedInt("Enter Quantity: ");
     item.price = getValidatedDouble("Enter Price: ");
@@ -100,7 +108,7 @@ void addItem() {
     cout << "Item added successfully!\n";
 }
 
-//UPDATE ITEM =============================================================================================
+// UPDATE ITEM =============================================================================================
 void updateItem() {
     if (inventory.empty()) {
         cout << "Inventory is empty. Cannot update.\n";
@@ -114,6 +122,12 @@ void updateItem() {
     for (auto& item : inventory) {
         if (item.id == id) {
             found = true;
+
+            if (!getUpdateConfirmation()) {
+                cout << "Update cancelled.\n";
+                return;
+            }
+
             cout << "Updating item: " << item.name << "\n";
 
             item.name = getUpdatedString("Enter new name (or press Enter to keep current): ", item.name);
@@ -131,7 +145,7 @@ void updateItem() {
     }
 }
 
-//DELETE ITEM =============================================================================================
+// DELETE ITEM =============================================================================================
 void deleteItem() {
     if (inventory.empty()) {
         cout << "Cannot delete: No items in the inventory.\n";
@@ -143,13 +157,14 @@ void deleteItem() {
 
     for (auto it = inventory.begin(); it != inventory.end(); ++it) {
         if (it->id == id) {
-            if (getYesNoConfirmation("Are you sure you want to delete this item? (Y/N): ")) {
-                cout << "Deleting item: " << it->name << "\n";
-                inventory.erase(it);
-                cout << "Item deleted successfully!\n";
-            } else {
+            if (!getDeleteConfirmation()) {
                 cout << "Deletion cancelled.\n";
+                return;
             }
+
+            cout << "Deleting item: " << it->name << "\n";
+            inventory.erase(it);
+            cout << "Item deleted successfully!\n";
             return;
         }
     }
@@ -157,16 +172,14 @@ void deleteItem() {
     cout << "Item with ID " << id << " not found.\n";
 }
 
-//SEARCH ITEM =============================================================================================
+// SEARCH ITEM =============================================================================================
 void searchItem() {
     if (inventory.empty()) {
         cout << "Inventory is empty. Nothing to search.\n";
         return;
     }
 
-    cout << "Enter Item ID or Name to search: ";
-    string input;
-    getline(cin, input);
+    string input = getUpdatedString("Enter Item ID or Name to search: ", "");
 
     bool isId = !input.empty() && all_of(input.begin(), input.end(), ::isdigit);
 

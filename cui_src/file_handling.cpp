@@ -1,21 +1,23 @@
 #include <string>
 #include <fstream>
+using namespace std;
 
-bool fileExists(const std::string& filename) {
-    std::ifstream file(filename);
+// FILE EXISTENCE CHECKER
+bool fileExists(const string& filename) {
+    ifstream file(filename);
     return file.good();
 }
 
 // FILE NAME GENERATOR
-std::string generateUniqueFilename(const std::string& baseName) {
+string generateUniqueFilename(const string& baseName) {
     int index = 0;
-    std::string filename;
+    string filename;
 
     do {
         if (index == 0) {
             filename = baseName + ".txt";
         } else {
-            filename = baseName + "(" + std::to_string(index) + ").txt";
+            filename = baseName + "(" + to_string(index) + ").txt";
         }
         index++;
     } while (fileExists(filename));  // <-- loop while filename exists

@@ -6,6 +6,7 @@ using namespace std;
 
 void showMenu();
 
+//show menu
 int menu() {
     int choice;
     bool running = true;

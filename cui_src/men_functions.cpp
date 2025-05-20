@@ -21,7 +21,7 @@ protected:
 
 vector<Item> inventory;
 
-// LOAD TO INVENTORY =============================================================================================
+// LOAD TO INVENTORY
 void loadInventoryFromFile() {
     if (!getLoadConfirmation()) {
         cout << "Load cancelled.\n";
@@ -66,7 +66,7 @@ void loadInventoryFromFile() {
     cout << "Inventory loaded from " << filename << " successfully.\n";
 }
 
-// SAVE TO INVENTORY =============================================================================================
+// SAVE TO INVENTORY 
 void saveInventoryToFile() {
     if (!getSaveConfirmation()) {
         cout << "Save cancelled.\n";
@@ -90,7 +90,7 @@ void saveInventoryToFile() {
     cout << "Inventory saved to root folder as '" << filename << "' successfully.\n";
 }
 
-// VIEW ITEM =============================================================================================
+// VIEW ITEM 
 void viewItems() {
     if (inventory.empty()) {
         cout << "Inventory is empty.\n";
@@ -99,7 +99,7 @@ void viewItems() {
     printInventoryList(inventory);
 }
 
-// ADD ITEM ===============================================================================================
+// ADD ITEM 
 void addItem() {
     if (!getAddConfirmation()) {
         cout << "Add item cancelled.\n";
@@ -119,7 +119,7 @@ void addItem() {
     cout << "Item added successfully!\n";
 }
 
-// UPDATE ITEM =============================================================================================
+// UPDATE ITEM 
 void updateStock() {
     if (inventory.empty()) {
         cout << "Inventory is empty. Cannot update stock.\n";
@@ -165,7 +165,7 @@ void updateStock() {
 }
 
 
-// DELETE ITEM =============================================================================================
+// DELETE ITEM 
 void deleteItem() {
     if (inventory.empty()) {
         cout << "Cannot delete: No items in the inventory.\n";
@@ -192,7 +192,7 @@ void deleteItem() {
     cout << "Item with ID " << id << " not found.\n";
 }
 
-// SEARCH ITEM =============================================================================================
+// SEARCH ITEM 
 void searchItem() {
     if (inventory.empty()) {
         cout << "Inventory is empty. Nothing to search.\n";
@@ -242,7 +242,7 @@ void searchItem() {
 }
 
 
-// INVENTORY VALUE =============================================================================================
+// INVENTORY VALUE 
 
 // Calculate total inventory value (sum of quantity * price)
 double calculateInventoryValue() {

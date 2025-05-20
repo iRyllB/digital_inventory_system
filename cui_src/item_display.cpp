@@ -1,9 +1,9 @@
 #include "../cui_header/item_display.h"
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
+// PRINT ITEM HEADER
 void printItemHeader() {
     cout << left << setw(10) << "ID"
          << setw(25) << "Name"
@@ -11,8 +11,9 @@ void printItemHeader() {
          << setw(10) << "Quantity"
          << setw(10) << "Price" << "\n";
     cout << "--------------------------------------------------------------\n";
-}
+} 
 
+// PRINT ITEM ROW
 void printItemRow(const Item& item) {
     cout << left << setw(10) << item.id
          << setw(25) << item.name
@@ -21,13 +22,14 @@ void printItemRow(const Item& item) {
          << setw(10) << fixed << setprecision(2)<< item.price << "\n";
 }
 
+// PRINT INVENTORY LIST
 void printInventoryList(const vector<Item>& inventory) {
     printItemHeader();
     for (const auto& item : inventory) {
         printItemRow(item);
     }
 }
-
+// PRINT BASIC ITEM LIST
 void printBasicItemList(const vector<Item>& inventory) {
     cout << left << setw(10) << "ID"
          << setw(25) << "Name"

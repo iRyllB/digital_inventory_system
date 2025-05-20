@@ -198,7 +198,6 @@ void searchItem() {
         cout << "Inventory is empty. Nothing to search.\n";
         return;
     }
-
     string input = getUpdatedString("Enter Item ID or Name to search: ", "");
 
     bool isId = !input.empty() && all_of(input.begin(), input.end(), ::isdigit);

@@ -8,17 +8,15 @@
 #include <QLocale>
 #include <QFileDialog>
 #include <QtPrintSupport/QPrinter>
-
 #include <QTextDocument>
-
+#include "inputvalidator.h"  // Include this if you have the validator class
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow){
     ui->setupUi(this);
 
-    // Optional: Connect buttons to functions here
-    // connect(ui->pushButton_add, &QPushButton::clicked, this, &MainWindow::onAddProduct);
+    currentFile = ""; // no file loaded at startup
 }
 
 MainWindow::~MainWindow(){
@@ -27,9 +25,9 @@ MainWindow::~MainWindow(){
 
 void MainWindow::closeEvent(QCloseEvent *event){
     if (ExitConfirmation::confirmExit(this)) {
-        event->accept();  // Accept the event, window will close
+        event->accept();
     } else {
-        event->ignore();  // Ignore the event, window stays open
+        event->ignore();
     }
 }
 
@@ -41,9 +39,18 @@ void MainWindow::on_pushButton_exit_clicked(){
 
 void MainWindow::on_pushButton_load_clicked()
 {
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QString filePath = QFileDialog::getOpenFileName(this,
+                                                    "Open Product File",
+                                                    QDir::homePath(),
+                                                    "Text Files (*.txt);;All Files (*)");
+
+    if (filePath.isEmpty()) return;
+
+    currentFile = filePath; // save selected file
+
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
@@ -60,7 +67,6 @@ void MainWindow::on_pushButton_load_clicked()
         QStringList fields = line.split(",");
 
         if (row == 0) {
-            // First line is header
             ui->tableWidget_products->setColumnCount(fields.size());
             ui->tableWidget_products->setHorizontalHeaderLabels(fields);
         } else {
@@ -75,23 +81,24 @@ void MainWindow::on_pushButton_load_clicked()
     file.close();
 }
 
-#include "inputvalidator.h"  // Include this if you have the validator class
-
 void MainWindow::on_pushButton_add_clicked()
 {
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
     QString id = ui->lineEdit_id->text().trimmed();
     QString name = ui->lineEdit_name->text().trimmed();
     QString category = ui->comboBox_category->currentText().trimmed();
     int quantity = ui->spinBox_quantity->value();
     double price = ui->doubleSpinBox_price->value();
 
-    // Basic empty field check
     if (id.isEmpty() || name.isEmpty() || category.isEmpty()) {
         QMessageBox::warning(this, "Input Error", "Please fill in all fields.");
         return;
     }
 
-    // Check if id is a valid integer
     bool idIsInt = false;
     id.toInt(&idIsInt);
     if (!idIsInt) {
@@ -99,19 +106,7 @@ void MainWindow::on_pushButton_add_clicked()
         return;
     }
 
-    // Quantity and price are from spinboxes, so already validated by UI controls,
-    // but you can add extra checks if needed:
-    if (quantity < 0) {
-        QMessageBox::warning(this, "Input Error", "Quantity must be zero or more.");
-        return;
-    }
-    if (price < 0.0) {
-        QMessageBox::warning(this, "Input Error", "Price must be zero or more.");
-        return;
-    }
-
-    // Check for duplicate ID in product.txt
-    QFile checkFile("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile checkFile(currentFile);
     if (checkFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&checkFile);
         bool duplicate = false;
@@ -132,14 +127,13 @@ void MainWindow::on_pushButton_add_clicked()
             return;
         }
     } else {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
-    // Append product to file
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile file(currentFile);
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for writing.");
+        QMessageBox::warning(this, "File Error", "Could not open file for writing.");
         return;
     }
 
@@ -147,7 +141,6 @@ void MainWindow::on_pushButton_add_clicked()
     out << id << "," << name << "," << category << "," << quantity << "," << QString::number(price, 'f', 2) << "\n";
     file.close();
 
-    // Clear input fields after adding product
     ui->lineEdit_id->clear();
     ui->lineEdit_name->clear();
     ui->comboBox_category->setCurrentIndex(0);
@@ -155,13 +148,16 @@ void MainWindow::on_pushButton_add_clicked()
     ui->doubleSpinBox_price->setValue(0.00);
 
     QMessageBox::information(this, "Success", "Product added successfully.");
-
-    // Reload the table to show new product
     on_pushButton_load_clicked();
 }
 
 void MainWindow::on_pushButton_delete_clicked()
 {
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
     QString idToDelete = ui->lineEdit_delete->text().trimmed();
 
     if (idToDelete.isEmpty()) {
@@ -169,17 +165,16 @@ void MainWindow::on_pushButton_delete_clicked()
         return;
     }
 
-    // Make sure id is integer
     bool ok;
-    int idInt = idToDelete.toInt(&ok);
+    idToDelete.toInt(&ok);
     if (!ok) {
         QMessageBox::warning(this, "Input Error", "Product ID must be an integer.");
         return;
     }
 
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
@@ -188,7 +183,6 @@ void MainWindow::on_pushButton_delete_clicked()
     QString productLineToDelete;
     QString productDetails;
 
-    // Read all lines, find the product and keep track for deletion
     while (!in.atEnd()) {
         QString line = in.readLine().trimmed();
         if (line.isEmpty()) continue;
@@ -204,7 +198,7 @@ void MainWindow::on_pushButton_delete_clicked()
                                  .arg(fields.value(3))
                                  .arg(fields.value(4));
         } else {
-            lines << line;  // Keep all other lines
+            lines << line;
         }
     }
     file.close();
@@ -214,17 +208,14 @@ void MainWindow::on_pushButton_delete_clicked()
         return;
     }
 
-    // Show confirmation dialog with product details
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Confirm Delete",
                                                               "Are you sure you want to delete this product?\n\n" + productDetails,
                                                               QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::No)
-        return;  // User cancelled
+    if (reply == QMessageBox::No) return;
 
-    // Rewrite file without the deleted product line
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for writing.");
+        QMessageBox::warning(this, "File Error", "Could not open file for writing.");
         return;
     }
 
@@ -235,30 +226,31 @@ void MainWindow::on_pushButton_delete_clicked()
     file.close();
 
     QMessageBox::information(this, "Deleted", "Product deleted successfully.");
-
-    // Clear delete input and reload table
     ui->lineEdit_delete->clear();
     on_pushButton_load_clicked();
 }
 
 void MainWindow::on_pushButton_search_clicked()
 {
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
     QString searchText = ui->lineEdit_search->text().trimmed();
     QString filter = ui->comboBox_filter->currentText();
 
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
     QTextStream in(&file);
 
-    // Read header
     QString headerLine = in.readLine().trimmed();
     QStringList headers = headerLine.split(",");
 
-    // Setup table
     ui->tableWidget_products->clear();
     ui->tableWidget_products->setRowCount(0);
     ui->tableWidget_products->setColumnCount(headers.size());
@@ -301,27 +293,26 @@ void MainWindow::on_pushButton_search_clicked()
 
 void MainWindow::on_pushButton_reset_search_clicked()
 {
-    // Clear search field and reset filter
     ui->lineEdit_search->clear();
-    ui->comboBox_filter->setCurrentIndex(0);  // Assumes "All" is the first item
-
-    // Reload the entire table
+    ui->comboBox_filter->setCurrentIndex(0);
     on_pushButton_load_clicked();
 }
 
-
 void MainWindow::on_pushButton_calculate_clicked()
 {
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
     QTextStream in(&file);
     double totalValue = 0.0;
-
-    // Skip header
     QString headerLine = in.readLine();
 
     while (!in.atEnd()) {
@@ -338,15 +329,18 @@ void MainWindow::on_pushButton_calculate_clicked()
 
     file.close();
 
-    // Format the total with commas
     QLocale locale(QLocale::English);
-    QString formattedValue = locale.toString(totalValue, 'f', 2);  // e.g., "12,345.67"
-
+    QString formattedValue = locale.toString(totalValue, 'f', 2);
     ui->label_totalValue->setText("₱" + formattedValue);
 }
 
 void MainWindow::on_pushButton_stockIn_clicked()
 {
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
     QString targetID = ui->lineEdit_id_2->text().trimmed();
     int addQty = ui->spinBox_quantity_2->value();
 
@@ -355,7 +349,7 @@ void MainWindow::on_pushButton_stockIn_clicked()
         return;
     }
 
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) return;
 
     QStringList lines;
@@ -364,9 +358,8 @@ void MainWindow::on_pushButton_stockIn_clicked()
     lines << header;
 
     bool found = false;
-    int rowToUpdate = -1;
 
-    for (int row = 0; !in.atEnd(); ++row) {
+    while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList parts = line.split(',');
 
@@ -376,14 +369,12 @@ void MainWindow::on_pushButton_stockIn_clicked()
             parts[3] = QString::number(newQty);
             line = parts.join(',');
 
-            // Update the tableWidget
             for (int i = 0; i < ui->tableWidget_products->rowCount(); ++i) {
                 if (ui->tableWidget_products->item(i, 0)->text() == targetID) {
                     ui->tableWidget_products->item(i, 3)->setText(QString::number(newQty));
                     break;
                 }
             }
-
             found = true;
         }
 
@@ -396,7 +387,6 @@ void MainWindow::on_pushButton_stockIn_clicked()
         return;
     }
 
-    // Save updated file
     if (file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         QTextStream out(&file);
         for (const QString &line : lines) {
@@ -408,9 +398,13 @@ void MainWindow::on_pushButton_stockIn_clicked()
     QMessageBox::information(this, "Stock In", "Stock added successfully.");
 }
 
-
 void MainWindow::on_pushButton_stockOut_clicked()
 {
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
     QString targetID = ui->lineEdit_id_2->text().trimmed();
     int outQty = ui->spinBox_quantity_2->value();
 
@@ -419,7 +413,7 @@ void MainWindow::on_pushButton_stockOut_clicked()
         return;
     }
 
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) return;
 
     QStringList lines;
@@ -430,7 +424,7 @@ void MainWindow::on_pushButton_stockOut_clicked()
     bool found = false;
     int currentQty = 0;
 
-    for (int row = 0; !in.atEnd(); ++row) {
+    while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList parts = line.split(',');
 
@@ -445,14 +439,12 @@ void MainWindow::on_pushButton_stockOut_clicked()
             parts[3] = QString::number(newQty);
             line = parts.join(',');
 
-            // Update the tableWidget
             for (int i = 0; i < ui->tableWidget_products->rowCount(); ++i) {
                 if (ui->tableWidget_products->item(i, 0)->text() == targetID) {
                     ui->tableWidget_products->item(i, 3)->setText(QString::number(newQty));
                     break;
                 }
             }
-
             found = true;
         }
 
@@ -465,7 +457,6 @@ void MainWindow::on_pushButton_stockOut_clicked()
         return;
     }
 
-    // Save updated file
     if (file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         QTextStream out(&file);
         for (const QString &line : lines) {
@@ -479,9 +470,14 @@ void MainWindow::on_pushButton_stockOut_clicked()
 
 void MainWindow::on_pushButton_print_clicked()
 {
-    QFile file("C:/Users/PC/Documents/GitRepository/digital_inventory_system/product.txt");
+    if (currentFile.isEmpty()) {
+        QMessageBox::warning(this, "No File", "Please load a product file first.");
+        return;
+    }
+
+    QFile file(currentFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "File Error", "Could not open product.txt for reading.");
+        QMessageBox::warning(this, "File Error", "Could not open file for reading.");
         return;
     }
 
@@ -493,7 +489,7 @@ void MainWindow::on_pushButton_print_clicked()
     html += "<table border='1' cellspacing='0' cellpadding='4' width='100%'>";
     html += "<tr bgcolor='#f0f0f0'><th>Product ID</th><th>Name</th><th>Category</th><th>Quantity</th><th>Price (₱)</th><th>Value (₱)</th></tr>";
 
-    QString headerLine = in.readLine();  // Skip CSV header
+    QString headerLine = in.readLine(); // skip header
 
     while (!in.atEnd()) {
         QString line = in.readLine().trimmed();
@@ -525,7 +521,7 @@ void MainWindow::on_pushButton_print_clicked()
     html += "</table>";
     html += QString("<p style='text-align:right; font-weight:bold;'>Total Inventory Value: ₱%1</p>").arg(formattedValue);
 
-    // PDF Printing
+    // ask where to save PDF
     QString filePath = QFileDialog::getSaveFileName(this, "Save PDF", "inventory_report.pdf", "PDF Files (*.pdf)");
     if (filePath.isEmpty()) return;
 
@@ -534,13 +530,11 @@ void MainWindow::on_pushButton_print_clicked()
 
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFormat(QPrinter::PdfFormat);
-    printer.setOutputFileName(filePath);
-    printer.setPageMargins(QMarginsF(15, 15, 15, 15));
+    printer.setOutputFileName(filePath);   // ✅ correct method
 
     QTextDocument doc;
     doc.setHtml(html);
     doc.print(&printer);
 
-    QMessageBox::information(this, "PDF Generated", "Inventory report successfully saved as PDF.");
+    QMessageBox::information(this, "Success", "PDF report generated successfully.");
 }
-

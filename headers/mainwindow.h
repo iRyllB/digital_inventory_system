@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString currentFile;
 
 protected:
     void closeEvent(QCloseEvent *event) override;
